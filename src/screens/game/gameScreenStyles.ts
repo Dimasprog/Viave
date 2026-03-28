@@ -1,0 +1,360 @@
+import { StyleSheet } from 'react-native';
+import { colors, fonts, spacing } from '../../theme';
+
+export const gameScreenStyles = StyleSheet.create({
+  root: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  topBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingBottom: spacing.sm,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: colors.border,
+    backgroundColor: colors.surface,
+  },
+  topBarSide: {
+    width: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  topBarCenter: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  timerDimmed: {
+    opacity: 0.55,
+  },
+  pauseBtn: {
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: colors.surfaceElevated,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pauseBtnPressed: {
+    backgroundColor: colors.accent,
+    borderColor: colors.accent,
+  },
+  pauseBars: {
+    flexDirection: 'row',
+    gap: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pauseBar: {
+    width: 4,
+    height: 16,
+    borderRadius: 2,
+    backgroundColor: colors.textMuted,
+  },
+  pausePlayGlyph: {
+    color: colors.text,
+    fontSize: 18,
+    fontFamily: fonts.extraBold,
+    marginLeft: 3,
+  },
+  pauseGlyphOnAccent: {
+    color: '#fff',
+  },
+  pauseBarOnAccent: {
+    backgroundColor: '#fff',
+  },
+  body: {
+    minHeight: 0,
+  },
+  bodyFlex: {
+    flex: 1,
+  },
+  scoreRowDimmed: {
+    opacity: 0.7,
+  },
+  landRoot: {
+    flex: 1,
+    minHeight: 0,
+  },
+  landRow: {
+    flex: 1,
+    flexDirection: 'row',
+    minHeight: 0,
+  },
+  landColHalf: {
+    flex: 1,
+    minWidth: 0,
+    minHeight: 0,
+  },
+  landColInsetLeft: {
+    paddingRight: spacing.md,
+  },
+  landColInsetRight: {
+    paddingLeft: spacing.md,
+  },
+  landLeftScroll: {
+    flex: 1,
+    minHeight: 0,
+  },
+  landLeftScrollContent: {
+    flexGrow: 1,
+    paddingBottom: spacing.sm,
+    gap: spacing.sm,
+  },
+  landScoreScrollWrap: {
+    marginTop: spacing.xs,
+  },
+  wordCardLandscape: {
+    minHeight: 88,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.md,
+  },
+  bannerLandscape: {
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.sm,
+    borderWidth: StyleSheet.hairlineWidth * 2,
+    backgroundColor: 'rgba(234, 179, 8, 0.22)',
+    borderColor: 'rgba(250, 204, 21, 0.65)',
+    zIndex: 2,
+    elevation: 4,
+  },
+  bannerTextLandscape: {
+    lineHeight: 20,
+  },
+  landRightCol: {
+    justifyContent: 'flex-end',
+    alignItems: 'stretch',
+    minHeight: 0,
+  },
+  landRightStack: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    gap: spacing.md,
+    paddingBottom: spacing.xs,
+  },
+  landActionsColumn: {
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  portraitGrow: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    minHeight: 0,
+  },
+  wordBlock: {
+    gap: spacing.md,
+  },
+  wordCard: {
+    backgroundColor: colors.surfaceElevated,
+    borderRadius: 20,
+    paddingVertical: spacing.xl,
+    paddingHorizontal: spacing.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    minHeight: 140,
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.25,
+    shadowRadius: 16,
+    elevation: 6,
+  },
+  word: {
+    color: colors.text,
+    fontFamily: fonts.extraBold,
+    textAlign: 'center',
+    letterSpacing: 0.5,
+  },
+  banner: {
+    padding: spacing.md,
+    borderRadius: 14,
+    backgroundColor: 'rgba(234, 179, 8, 0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(234, 179, 8, 0.45)',
+  },
+  bannerText: {
+    color: '#fbbf24',
+    textAlign: 'center',
+    fontFamily: fonts.bold,
+  },
+  footer: {
+    gap: spacing.lg,
+    paddingTop: spacing.lg,
+  },
+  scoreCard: {
+    backgroundColor: colors.surface,
+    borderRadius: 16,
+    padding: spacing.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    gap: spacing.sm,
+  },
+  scoreTitle: {
+    color: colors.textMuted,
+    fontFamily: fonts.bold,
+    letterSpacing: 0.6,
+    textTransform: 'uppercase',
+    fontSize: 11,
+    marginBottom: spacing.xs,
+  },
+  scoreRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: spacing.xs,
+    gap: spacing.md,
+  },
+  scoreName: {
+    color: colors.text,
+    flex: 1,
+    fontFamily: fonts.semiBold,
+  },
+  scoreValue: {
+    color: colors.accent,
+    fontFamily: fonts.extraBold,
+    fontVariant: ['tabular-nums'],
+  },
+  actions: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    alignSelf: 'center',
+    width: '100%',
+    maxWidth: '100%',
+  },
+  wideActionBtn: {
+    minHeight: 58,
+    borderRadius: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.md,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.28,
+    shadowRadius: 10,
+    elevation: 8,
+  },
+  wideActionInner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    flex: 1,
+    gap: spacing.md,
+  },
+  wideActionGreen: {
+    backgroundColor: colors.success,
+  },
+  wideActionRed: {
+    backgroundColor: colors.danger,
+  },
+  wideActionDisabled: {
+    opacity: 0.38,
+  },
+  wideActionPressed: {
+    opacity: 0.92,
+  },
+  wideActionLabel: {
+    textAlign: 'right',
+    color: 'rgba(255,255,255,0.95)',
+    fontFamily: fonts.bold,
+    letterSpacing: 0.3,
+  },
+  nextRoundBtn: {
+    backgroundColor: colors.accent,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.xl,
+    borderRadius: 14,
+    alignItems: 'center',
+    alignSelf: 'stretch',
+  },
+  nextRoundBtnCompact: {
+    alignSelf: 'center',
+    paddingHorizontal: spacing.md,
+    maxWidth: '100%',
+  },
+  nextRoundBtnPressed: {
+    backgroundColor: colors.accentPressed,
+  },
+  nextRoundText: {
+    color: '#fff',
+    fontFamily: fonts.extraBold,
+  },
+  pauseModalRoot: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.72)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: spacing.xl,
+  },
+  pauseCard: {
+    width: '100%',
+    maxWidth: 340,
+    backgroundColor: colors.surfaceElevated,
+    borderRadius: 20,
+    padding: spacing.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
+    gap: spacing.md,
+  },
+  pauseTitle: {
+    color: colors.text,
+    fontFamily: fonts.extraBold,
+    textAlign: 'center',
+  },
+  pauseHint: {
+    color: colors.textMuted,
+    textAlign: 'center',
+    lineHeight: 20,
+    marginBottom: spacing.xs,
+  },
+  pausePrimaryBtn: {
+    backgroundColor: colors.accent,
+    paddingVertical: spacing.md + 2,
+    borderRadius: 14,
+    alignItems: 'center',
+  },
+  pausePrimaryBtnPressed: {
+    backgroundColor: colors.accentPressed,
+  },
+  pausePrimaryText: {
+    color: '#fff',
+    fontFamily: fonts.extraBold,
+  },
+  pauseSecondaryBtn: {
+    paddingVertical: spacing.md,
+    borderRadius: 14,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+  },
+  pauseSecondaryBtnPressed: {
+    opacity: 0.88,
+  },
+  pauseSecondaryText: {
+    color: colors.danger,
+    fontFamily: fonts.bold,
+  },
+  pauseSecondaryTextMuted: {
+    color: colors.text,
+    fontFamily: fonts.bold,
+  },
+  exitConfirmDangerBtn: {
+    backgroundColor: colors.danger,
+    paddingVertical: spacing.md + 2,
+    borderRadius: 14,
+    alignItems: 'center',
+  },
+  exitConfirmDangerBtnPressed: {
+    opacity: 0.9,
+  },
+  exitConfirmDangerText: {
+    color: '#fff',
+    fontFamily: fonts.extraBold,
+  },
+});

@@ -14,3 +14,5 @@ gem 'bigdecimal'
 gem 'logger'
 gem 'benchmark'
 gem 'mutex_m'
+# Ruby 3.4+: kconv nu mai e în stdlib; CFPropertyList face `require 'kconv'`. Gem-ul `nkf` îl expune.
+gem 'nkf'

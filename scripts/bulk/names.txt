@@ -1,0 +1,251 @@
+# names
+Abel|Авель
+Cain|Каин
+Set|Сиф
+Enoh|Енох
+Irad|Иред
+Mehuiael|Мехиаил
+Metusael|Мафусал
+Lameh|Ламех
+Ada|Ада
+Sila|Сила
+Sem|Сим
+Ham|Хам
+Iafet|Иафет
+Gomer|Гомер
+Magog|Магог
+Madai|Мадай
+Iavan|Иаван
+Tubal|Тувал
+Mesec|Месех
+Tiras|Фирас
+Ashkenaz|Аскеназ
+Rifat|Рифат
+Togarma|Фогарма
+Elișa|Елиса
+Tarsis|Фарсис
+Kitim|Китим
+Rodanim|Доданим
+Peleg|Фалег
+Reu|Регу
+Serug|Серух
+Nahor|Нахор
+Terah|Фарра
+Abram|Аврам
+Sarai|Сара
+Lot|Лот
+Hagar|Агар
+Ismael|Измаил
+Rebeca|Ревекка
+Esau|Исав
+Lea|Лия
+Rahela|Рахиль
+Bala|Валла
+Zilpa|Зилпа
+Dina|Дина
+Manase|Манассия
+Efraim|Ефрем
+Oholibama|Оголива
+Elifaz|Елифаз
+Reguel|Рагуил
+Tema|Фема
+Naiot|Наиоф
+Laban|Лаван
+Betuel|Ватуил
+Milca|Милка
+Maaca|Мааха
+Abimelec|Авимелех
+Ficol|Фихол
+Eshton|Ештон
+Pereț|Фарец
+Zerah|Зерах
+Ahiman|Ахиман
+Sesai|Шешай
+Talmai|Талмай
+Anac|Анак
+Otniel|Отниил
+Ehud|Аод
+Șamgar|Шамгар
+Debora|Девора
+Baraq|Варак
+Ghedeon|Гедеон
+Ieftah|Иеффай
+Manoe|Маной
+Samson|Самсон
+Boaz|Вооз
+Naomi|Ноемин
+Orpa|Орфа
+Mahlon|Махлон
+Chilion|Хилион
+Achin|Ахан
+Abdon|Авдон
+Iair|Иаир
+Ibzan|Изан
+Elon|Елон
+Samuel|Самуил
+Eli|Илий
+Fineas|Финеес
+Ahitub|Ахитув
+Ichabod|Ихавод
+Abner|Авенир
+Asael|Асаил
+Iș-Boșet|Исбосеф
+Mefiboșet|Мефивосф
+Abigail|Авигея
+Ahinoam|Ахиноама
+Absalom|Авессалом
+Tamar|Фамар
+Ahitofel|Ахитофел
+Amasa|Амаса
+Barzilai|Верзеллай
+Șimei|Семей
+Adonia|Адония
+Roboam|Ровоам
+Asa|Аса
+Iehosafat|Иосафат
+Ahazia|Охозия
+Ioram|Иорам
+Iehu|Иегу
+Atalia|Гофолия
+Ioas|Иоас
+Amasia|Амасия
+Azaria|Озия
+Iotam|Иофам
+Ahaz|Ахаз
+Ezechia|Езекия
+Amon|Амон
+Iosia|Иосия
+Iehonia|Иехония
+Sedechia|Седекия
+Șealtiel|Салафиил
+Zorobabel|Зоровавель
+Neemia|Неемия
+Mordecai|Мардохей
+Hașum|Гасум
+Malahi|Малахия
+Osea|Осия
+Ioil|Иоиль
+Amos|Амос
+Obadia|Авдий
+Iona|Иона
+Mica|Михей
+Naum|Наум
+Habacuc|Аввакум
+Țefania|Софония
+Hagai|Аггей
+Zaharia|Захария
+Ana|Анна
+Andrei|Андрей
+Filip|Филипп
+Bartolomeu|Варфоломей
+Matei|Матфей
+Tadeu|Фаддей
+Simon|Симон
+Lazar|Лазарь
+Martă|Марфа
+Maria Magdalena|Мария Магдалина
+Ioana|Иоанна
+Salomee|Саломия
+Gamaliel|Гамалиил
+Barnaba|Варнава
+Lidia|Лидия
+Priscila|Прискилла
+Aquila|Акила
+Apolo|Аполлос
+Timon|Тимон
+Parmena|Пармена
+Nicolae|Николай
+Procor|Прокор
+Stefan|Стефан
+Aristarh|Аристарх
+Secund|Секунд
+Erast|Ераст
+Sosipater|Сосипатр
+Tryphena|Трифена
+Tryphosa|Трифоса
+Persida|Персида
+Eunice|Евникия
+Lois|Лоида
+Ghehazi|Гиезий
+Naaman|Наман
+Elisei|Елисей
+Hazael|Азаил
+Iehonadab|Иохонадав
+Ionatan|Ионафан
+Saul|Саул
+Michal|Михол
+Merab|Мерава
+Amnon|Амнон
+Hiram|Хирам
+Balak|Валак
+Balaam|Валаам
+Eleazar|Елеазар
+Itamar|Ифамар
+Nadab|Надав
+Abihu|Авию
+Pinehas|Пинеес
+Salmon|Салмон
+Obed|Овид
+Agur|Агур
+Lemuel|Лемуил
+Iov|Иов
+Bildad|Вилдад
+țofar|Софар
+Elihu|Елиуй
+Ahab|Ахав
+Iezabel|Изавель
+Micaia|Михей
+Elisei proorocul|Елисей
+Iehu proorocul|Иегу
+Ilie proorocul|Илия
+Elisei ucenicul|Елисей
+Ghehazi slujitorul|Гиезий
+Naaman sirianul|Наман
+Benhadad|Венадад
+Hazael sirianul|Азаил
+Iehu împăratul|Иегу
+Ioram împăratul|Иорам
+Ahazia împăratul|Ахазия
+Atalia regina|Гофолия
+Ioaș|Иоас
+Estera|Есфирь
+Vasti|Астин
+Hegai|Гегай
+Mehuman|Мегуман
+Bizta|Бизта
+Harbona|Гарвона
+Bigtan|Бигфан
+Teresh|Терес
+Mardoheu|Мардохей
+Zaharia tatăl lui Ioan|Захария
+Elisabet|Елисавета
+Ioseph din Arimateea|Иосиф
+Nicodem|Никодим
+Cleopa|Клеопа
+Simeon din Ierusalim|Симеон
+Ana prooteasa|Анна
+Matia|Матфий
+Ioseph Barsaba|Иосиф
+Iuda Barsaba|Иуда
+Iustus|Иуст
+Manahen|Манаен
+Lucius|Луций
+Simeon Niger|Симеон
+Nicanor|Никанор
+Parmena diaconul|Пармена
+Nicolae diaconul|Николай
+Procor diaconul|Прокор
+Timon diaconul|Тимон
+Filimon|Филимон
+Onisim|Оним
+Apfia|Апфия
+Arhip|Архип
+Nimf|Нимфа
+Epafras|Епафрас
+Luka|Лука
+Demetriu|Димитрий
+Gaius|Гай
+Diotref|Диотреф
+Linus|Лин
+Pudens|Пуд
+Claudia|Клавдия
