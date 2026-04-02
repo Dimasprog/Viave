@@ -1,5 +1,5 @@
 /**
- * Verifică: 250 linii per fișier, fără duplicate după câmpul `ro`.
+ * Verifică fișierele scripts/bulk/*.txt: format ro|ru, fără duplicate după `ro`.
  */
 import fs from 'fs';
 import path from 'path';
@@ -8,8 +8,11 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, 'bulk');
 
-function check(name, expected = 250) {
-  const file = path.join(root, `${name}.txt`);
+function checkFile(baseName) {
+  const file = path.join(root, `${baseName}.txt`);
+  if (!fs.existsSync(file)) {
+    throw new Error(`Lipsește ${file}`);
+  }
   const text = fs.readFileSync(file, 'utf8');
   const rows = [];
   const seen = new Set();
@@ -21,28 +24,39 @@ function check(name, expected = 250) {
     }
     const pipe = t.indexOf('|');
     if (pipe === -1) {
-      throw new Error(`${name}: linie fără |: ${t}`);
+      throw new Error(`${baseName}: linie fără |: ${t}`);
     }
     const ro = t.slice(0, pipe).trim();
     const ru = t.slice(pipe + 1).trim();
     if (!ro || !ru) {
-      throw new Error(`${name}: gol: ${t}`);
+      throw new Error(`${baseName}: gol: ${t}`);
     }
-    if (seen.has(ro)) {
+    const k = ro.toLowerCase();
+    if (seen.has(k)) {
       dupes.push(ro);
     }
-    seen.add(ro);
+    seen.add(k);
     rows.push({ ro, ru });
   }
-  if (rows.length !== expected) {
-    throw new Error(`${name}: așteptat ${expected} intrări, am ${rows.length}`);
-  }
   if (dupes.length) {
-    throw new Error(`${name}: duplicate ro: ${dupes.slice(0, 15).join(', ')}`);
+    throw new Error(
+      `${baseName}: duplicate ro: ${dupes.slice(0, 15).join(', ')}`,
+    );
   }
-  console.error(`OK ${name}: ${rows.length} unice`);
+  console.error(`OK ${baseName}: ${rows.length} unice`);
 }
 
-for (const n of ['names', 'places', 'life', 'nature']) {
-  check(n, 250);
+const FILES = [
+  'names',
+  'places',
+  'life',
+  'nature',
+  'animals',
+  'objects',
+  'food',
+  'roles',
+];
+
+for (const n of FILES) {
+  checkFile(n);
 }

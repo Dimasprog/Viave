@@ -16,6 +16,10 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     category_places: 'Locuri biblice',
     category_life: 'Viață și credință',
     category_nature: 'Natură în Biblie',
+    category_animals: 'Animale biblice',
+    category_objects: 'Obiecte și unelte',
+    category_food: 'Mâncare și băutură',
+    category_roles: 'Meserii și titluri',
     category_mix: 'Mix',
     team_count_2: '2 echipe',
     team_count_3: '3 echipe',
@@ -33,9 +37,17 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     tribe_iosif: 'Iosif',
     tribe_beniamin: 'Beniamin',
     game_word_label: 'Cuvânt',
-    game_guess: 'Ghicit',
-    game_skip: 'Trecere',
+    game_guess: 'Corect',
+    game_skip: 'Skip',
     game_next_round: 'Runda următoare',
+    round_summary_title: 'Rezumat rundă',
+    round_summary_guessed: 'Ghicite',
+    round_summary_skipped: 'Trecute',
+    round_summary_empty: '—',
+    a11y_round_word_guessed: 'ghicit',
+    a11y_round_word_skipped: 'nu a fost ghicit',
+    a11y_round_summary_next:
+      'Începe runda următoare cu echipa următoare și timer resetat',
     game_menu: 'Meniu',
     game_stop: 'Stop',
     game_pause: 'Pauză',
@@ -90,6 +102,10 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     category_places: 'Библейские места',
     category_life: 'Жизнь и вера',
     category_nature: 'Природа в Библии',
+    category_animals: 'Библейские животные',
+    category_objects: 'Предметы и орудия',
+    category_food: 'Еда и напитки',
+    category_roles: 'Звания и служение',
     category_mix: 'Микс',
     team_count_2: '2 команды',
     team_count_3: '3 команды',
@@ -108,8 +124,16 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
     tribe_beniamin: 'Вениамин',
     game_word_label: 'Слово',
     game_guess: 'Угадано',
-    game_skip: 'Пропуск',
+    game_skip: 'Пропустить',
     game_next_round: 'Следующий раунд',
+    round_summary_title: 'Итог раунда',
+    round_summary_guessed: 'Угадано',
+    round_summary_skipped: 'Пропущено',
+    round_summary_empty: '—',
+    a11y_round_word_guessed: 'угадано',
+    a11y_round_word_skipped: 'пропущено',
+    a11y_round_summary_next:
+      'Начать следующий раунд со следующей командой и новым таймером',
     game_menu: 'Меню',
     game_stop: 'Стоп',
     game_pause: 'Пауза',
@@ -152,8 +176,3 @@ export const translations: Record<LanguageCode, Record<string, string>> = {
 };
 
 export type TranslationKey = keyof (typeof translations)['ro'];
-
-/**
- * 1. Check icon
- * 2. START Icon
- */

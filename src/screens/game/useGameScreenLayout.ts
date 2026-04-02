@@ -2,11 +2,8 @@ import { useMemo } from 'react';
 import { useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useScaledSize } from '../../hooks/useScaledSize';
-import { spacing } from '../../theme/spacing';
+import { spacing } from '../../theme';
 
-/**
- * Metrici comune pentru GameScreen și subcomponente (padding, lățimi acțiuni).
- */
 export function useGameScreenLayout() {
   const scaled = useScaledSize();
   const { width: windowWidth } = useWindowDimensions();
@@ -19,10 +16,7 @@ export function useGameScreenLayout() {
   const actionGap = spacing.md;
   const landColumnGap = useMemo(
     () =>
-      Math.max(
-        spacing.xxl + spacing.md,
-        Math.round(contentInnerWidth * 0.05),
-      ),
+      Math.max(spacing.xxl + spacing.md, Math.round(contentInnerWidth * 0.05)),
     [contentInnerWidth],
   );
   const landHalfInner = (contentInnerWidth - landColumnGap) / 2;

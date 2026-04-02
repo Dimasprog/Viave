@@ -37,6 +37,7 @@ export const homeScreenStyles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: 18,
     padding: spacing.lg,
+    paddingHorizontal: 0,
     borderWidth: 1,
     borderColor: colors.border,
     gap: spacing.sm,
@@ -47,6 +48,7 @@ export const homeScreenStyles = StyleSheet.create({
     elevation: 4,
   },
   label: {
+    paddingLeft: spacing.lg,
     color: colors.textMuted,
     marginBottom: spacing.xs,
     fontFamily: fonts.bold,
@@ -54,17 +56,18 @@ export const homeScreenStyles = StyleSheet.create({
     textTransform: 'uppercase',
     fontSize: 12,
   },
-  row: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: spacing.sm,
+  optionRowScroll: {
+    flexGrow: 0,
   },
-  wrap: {
+  optionRowScrollContent: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    alignItems: 'center',
     gap: spacing.sm,
+    flexGrow: 0,
+    paddingHorizontal: spacing.lg,
   },
   chip: {
+    flexShrink: 0,
     paddingVertical: spacing.sm + 2,
     paddingHorizontal: spacing.md + 4,
     borderRadius: 999,

@@ -1,251 +1,127 @@
 # places
-Ai|Аи
-Aiialon|Аиалон
-Arad|Арад
-Ararat|Арарат
-Așdod|Азот
-Așkelon|Аскалон
-Baala|Ваала
-Baal-Meon|Ваал-Меон
-Beer-Șeba|Вирсавия
+Ierusalim|Иерусалим
+Betleem|Вифлеем
+Nazaret|Назарет
+Galileea|Галилея
+Samaria|Самария
+Iudeea|Иудея
+Iordan|Иордан
+Sinai|Синай
+Horeb|Хорив
+Egipt|Египет
+Gosen|Гесем
+Madian|Мадиам
+Moab|Моав
+Edom|Едом
+Amon|Аммон
+Babilon|Вавилон
+Ninive|Ниневия
+Asiria|Ассирия
+Persia|Персия
+Roma|Рим
+Damasc|Дамаск
+Antiohia|Антиохия
+Efes|Эфес
+Corint|Коринф
+Filipi|Филиппы
+Tesalonic|Фессалоника
+Colose|Колоссы
+Laodiceea|Лаодикия
+Patmos|Патмос
+Capernaum|Капернаум
 Betania|Вифания
 Betfage|Виффагия
-Betleem|Вифлеем
-Betsaida|Вифсаида
-Bozra|Восра
-Cana|Кана
-Canaan|Ханаан
-Carmel|Кармил
-Cedron|Кедрон
-Colose|Колоссы
-Corint|Коринф
-Creța|Крит
-Damasc|Дамаск
-Dan|Дан
-Debir|Давир
-Edom|Едом
-Eglon|Еглон
-Ein-Gedi|Эн-Геди
-Elim|Елим
-Emauș|Еммаус
-Euprat|Евфрат
-Filadelfia|Филадельфия
-Filipi|Филиппы
-Gabaon|Гаваон
-Galileea|Галилея
-Gaza|Газа
-Gherico|Иерихон
-Gheț-Semani|Гефсимания
-Ghilgal|Галгал
-Gomora|Гоморра
-Gosen|Гесем
-Hebron|Хеврон
-Horeb|Хорив
-Ierihon|Иерихон
-Ierusalim|Иерусалим
-Iope|Иоппия
-Iordan|Иордан
-Iuda|Иудея
-Iezreel|Изреель
-Laodic|Лаодикия
-Liban|Ливан
-Lida|Лида
-Luz|Луз
-Maon|Маон
-Mare Moartă|Мёртвое море
-Mare Roșie|Красное море
-Mare Galileii|Галилейское море
-Megido|Мегиддо
-Midian|Мадиан
-Moab|Моав
-Moria|Мориа
-Nazaret|Назарет
-Negev|Негев
-Ninive|Ниневия
-Padan-Aram|Падан-Арам
-Patmos|Патмос
-Penuel|Пнуил
-Rama|Рама
-Ramot-Gilead|Рамоф-Галаад
-Rehobot|Реховот
-Roma|Рим
-Samaria|Самария
-Sela|Села
-Seir|Сеир
-Sichem|Сихем
-Sidon|Сидон
-Siloh|Силом
-Sinai|Синай
+Emaus|Эммаус
+Ghetsimani|Гефсимания
+Golgota|Голгофа
 Sion|Сион
-Socoh|Сокхо
-Taanac|Таанах
-Tars|Тарс
-Tel-Abib|Тел-Авив
-Timna|Тамна
-Tir|Тир
-Troada|Троада
-Valea Chedronului|Кедрон
-Zarepta|Сарепта
-Zif|Зиф
-Zorah|Цора
-Adulam|Одоллам
-Anatot|Анатоф
+Moria|Мориа
+Carmel|Кармил
+Tabor|Фавор
+Hermon|Ермон
+Ararat|Арарат
+Canaan|Ханаан
+Gherico|Иерихон
+Sihem|Сихем
 Betel|Вефиль
-Bet Horon|Вефорон
-Calvarul|Голгофа
-Capernaum|Капернаум
-Chision|Кисион
-Damascul cel Nou|Новый Дамаск
-Dan cetatea|Дан
-Dor|Дор
-En-Rogel|Ен-Рогел
-Eșcol|Ешкол
-Far|Фар
-Gaza orașul|Газа
-Gherimon|Геримон
-Hazar-Adar|Асар-адар
-Horma|Орма
-Horonaim|Оронаим
-Iabec|Иавис
-Iim|Иим
-Ioar|Иоар
-Ir|Ир
-Ismailia|Измаилия
-Laisa|Лаиса
-Libna|Ливна
-Luhit|Лухит
-Mare|Маре
-Mica locul|Миха
-Misraim|Мицраим
-Nazaret din Galileea|Назарет
-Negev deșertul|Негев
-Ninive zidurile|Ниневия
-On|Он
-Ophel|Офел
-Ophra|Офра
-Periferia|Периферия
-Filistia|Филистимляне
-Rama Benjamin|Рама
-Rehobot Iuda|Реховот
-Samaria muntele|Самария
-Sela Edom|Села
-Seir muntele|Сеир
-Sichem valea|Сихем
-Sidon portul|Сидон
-Siloh locul|Силом
-Sinai muntele|Синай
-Sion cetatea|Сион
-Socoh Iuda|Сокхо
-Taanac valea|Таанах
-Tars cetatea|Тарс
-Tel-Abib câmpia|Тел-Авив
-Timna Iuda|Тамна
-Tir insula|Тир
-Troada portul|Троада
-Uzal|Узал
-Ura|Ура
-Valea Saltului|Салт
-Zaananim|Цаананим
-Zeboim|Цевоим
-Abel-Maim|Авел-Маим
-Adora|Адора
-Adulam peștera|Одоллам
-Anatot satul|Анатоф
-Arad cetatea|Арад
-Arad deșertul|Арад
-Ararat muntele|Арарат
-Așdod câmpia|Азот
-Așkelon portul|Аскалон
-Baala Iuda|Ваала
-Baal-Meon Moab|Ваал-Меон
-Beer-Șeba fântâna|Вирсавия
-Betania Muntele Măslinilor|Вифания
-Betfage satul|Виффагия
-Betleem Efrata|Вифлеем
-Betsaida Galileea|Вифсаида
-Bozra Edom|Восра
-Cana Galileea|Кана
-Canaan țara|Ханаан
-Carmel muntele|Кармил
-Cedron pârâul|Кедрон
-Colose Frigia|Колоссы
-Corint Ahaia|Коринф
-Creța insula|Крит
-Damasc orașul|Дамаск
-Dan hotarul|Дан
-Debir cetatea|Давир
-Edom țara|Едом
-Eglon cetatea|Еглон
-Ein-Gedi oaza|Эн-Геди
-Elim oaza|Елим
-Emauș satul|Еммаус
-Euprat râul|Евфрат
-Filadelfia Asia|Филадельфия
-Filipi Macedonia|Филиппы
-Gabaon cetatea|Гаваон
-Galileea ținutul|Галилея
-Gaza fâșia|Газа
-Gherico zidurile|Иерихон
-Gheț-Semani grădina|Гефсимания
-Ghilgal tabăra|Галгал
-Gomora câmpia|Гоморра
-Gosen ținutul|Гесем
-Hebron cetatea|Хеврон
-Horeb muntele|Хорив
-Ierihon primul|Иерихон
-Ierusalim cetatea|Иерусалим
-Iope portul|Иоппия
-Iordan râul|Иордан
-Iuda regatul|Иудея
-Iezreel valea|Изреель
-Laodic Asia|Лаодикия
-Liban muntele|Ливан
-Lida cetatea|Лида
-Luz Betel|Луз
-Maon Iuda|Маон
-Mare Moartă sarea|Мёртвое море
-Mare Roșie trecerea|Красное море
-Mare Galileii furtuna|Галилейское море
-Megido valea|Мегиддо
-Midian deșertul|Мадиан
-Moab platoul|Моав
-Moria dealul|Мориа
-Nazaret satul|Назарет
-Negev hotarul|Негев
-Ninive capitala|Ниневия
-Patmos insula|Патмос
-Penuel locul|Пнуил
-Rama Benjaminului|Рама
-Ramot-Gilead cetatea|Рамоф-Галаад
-Rehobot Siloh|Реховот
-Roma imperiul|Рим
-Samaria capitala|Самария
-Sela stânca|Села
-Seir muntele Edom|Сеир
-Sichem poarta|Сихем
-Sidon fenicia|Сидон
-Siloh tabernacolul|Силом
-Sinai pustia|Синай
-Sion muntele|Сион
-Socoh filistină|Сокхо
-Taanac hotarul|Таанах
-Tars Cicilia|Тарс
-Tel-Abib Babilon|Тел-Авив
-Timna fiica|Тамна
-Tir fenicia|Тир
-Troada Asia|Троада
-Zarepta Sidon|Сарепта
-Zif pustia|Зиф
-Zorah Dan|Цора
-Abel-Bet-Maaca|Авел-Беф-Мааха
-Adoram|Адорам
+Beer-Șeba|Вирсавия
+Hebron|Хеврон
+Gaza|Газа
+Așdod|Азот
+Așkelon|Аскалон
+Tir|Тир
+Sidon|Сидон
+Lida|Лидда
+Iope|Иоппия
+Troa|Троада
+Tars|Тарс
+Creta|Крит
+Malta|Мальта
+Euprat|Евфрат
+Mare Roșie|Красное море
+Mare Moartă|Мёртвое море
+Muntele Sion|гора Сион
+Valea Chedron|долина Кедрон
+Ai|Аи
+Gabaon|Гаваон
+Debir|Давир
+Megido|Мегиддо
+Elim|Елим
+Marah|Мара
+Refidim|Рефидим
+Paran|Фаран
+Cades|Кадес
+Zin|Син
+Sela|Села
+Sodoma|Содом
+Gomora|Гоморра
+Zoar|Цоар
+Engedi|Эн-Геди
 Adullam|Одоллам
-Ai cetatea|Аи
-Aiialon valea|Аиалон
-Antiohia Pisidia|Антиохия Писидийская
-Antiohia Siria|Антиохия Сирийская
+Dothan|Дофан
+Sucot|Сокхот
+Peniel|Фенуил
+Iaboc|Иавок
+Arnon|Арнон
+Basan|Васан
+Liban|Ливан
+Galaad|Галаад
+Iabes|Иавис
+Mahanaim|Маханаим
+Bet-Șan|Бет-Сан
+Siclag|Сиклег
+Ceila|Кеила
+Nobe|Нов
+Anatot|Анатот
+Acheldamach|Акелдама
 Antipatris|Антипатрида
 Apolonia|Аполлония
-Așkelon hotarul|Аскалон
-Așdod cetatea|Азот
-Beer|Вирсавия
+Chipru|Кипр
+Milet|Милет
+Smirna|Смирна
+Sardes|Сардис
+Tiatira|Фиатира
+Pergam|Пергам
+Iconiu|Иконий
+Listra|Листра
+Derbe|Дервий
+Capadocia|Каппадокия
+Galatia|Галатия
+Filadelfia|Филадельфия
+Eghion|Эгей
+Rodos|Родос
+Patara|Патара
+Mira|Мира
+Chios|Хиос
+Samotracia|Самофракия
+Neapolis|Неаполь
+Amfipoli|Амфиполь
+Bereea|Берия
+Ahaia|Ахайя
+Pisidia|Писидия
+Licaonia|Ликаония
+Ofel|Офел
+Mifkad|Мифкад
+En-Rogel|Эн-Рогель
+En-Șemeș|Эн-Шемеш
+Rama|Рама

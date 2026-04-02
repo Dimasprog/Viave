@@ -14,6 +14,12 @@ import { getWordsForCategory } from '../data/words';
 
 export type GamePhase = 'idle' | 'playing' | 'roundEnded';
 
+/** O intrare în rezumatul rundei, în ordinea jocului. */
+export type RoundSummaryWordItem = {
+  entry: WordEntry;
+  guessed: boolean;
+};
+
 type GameState = {
   phase: GamePhase;
   categoryId: WordCategoryId | null;
@@ -22,11 +28,11 @@ type GameState = {
   wordIndex: number;
   scores: number[];
   currentTeamIndex: number;
-  /** Incremented when a playing round starts (fresh countdown). */
   timerSessionId: number;
   roundSeconds: RoundSecondsOption;
-  /** Dacă true, la skip scade un punct echipei curente (min. 0). */
   skipPenalizesScore: boolean;
+  timerExpiredGrace: boolean;
+  roundSummaryWords: RoundSummaryWordItem[];
 };
 
 function initialScores(teamCount: number): number[] {
@@ -44,6 +50,8 @@ const defaultState: GameState = {
   timerSessionId: 0,
   roundSeconds: DEFAULT_ROUND_SECONDS,
   skipPenalizesScore: false,
+  timerExpiredGrace: false,
+  roundSummaryWords: [],
 };
 
 type GameContextValue = {
@@ -57,6 +65,8 @@ type GameContextValue = {
   timerSessionId: number;
   roundSeconds: RoundSecondsOption;
   skipPenalizesScore: boolean;
+  timerExpiredGrace: boolean;
+  roundSummaryWords: RoundSummaryWordItem[];
   prepareGame: (
     categoryId: WordCategoryId,
     teamCount: TeamCount,
@@ -65,6 +75,7 @@ type GameContextValue = {
   ) => void;
   startRound: () => void;
   endRound: () => void;
+  notifyTimerExpired: () => void;
   guessWord: () => void;
   skipWord: () => void;
   nextRound: () => void;
@@ -95,6 +106,8 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         timerSessionId: 0,
         roundSeconds,
         skipPenalizesScore,
+        timerExpiredGrace: false,
+        roundSummaryWords: [],
       });
     },
     [],
@@ -109,12 +122,26 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         ...s,
         phase: 'playing',
         timerSessionId: s.timerSessionId + 1,
+        timerExpiredGrace: false,
       };
     });
   }, []);
 
   const endRound = useCallback(() => {
-    setState(s => (s.phase === 'playing' ? { ...s, phase: 'roundEnded' } : s));
+    setState(s =>
+      s.phase === 'playing'
+        ? { ...s, phase: 'roundEnded', timerExpiredGrace: false }
+        : s,
+    );
+  }, []);
+
+  const notifyTimerExpired = useCallback(() => {
+    setState(s => {
+      if (s.phase !== 'playing' || s.timerExpiredGrace) {
+        return s;
+      }
+      return { ...s, timerExpiredGrace: true };
+    });
   }, []);
 
   const advanceWord = useCallback((words: WordEntry[], wordIndex: number) => {
@@ -129,11 +156,29 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       if (s.phase !== 'playing' || !s.teamCount) {
         return s;
       }
-      const nextIdx = advanceWord(s.words, s.wordIndex);
+      const entry = s.words[s.wordIndex];
+      const nextWords =
+        entry != null
+          ? [...s.roundSummaryWords, { entry, guessed: true }]
+          : s.roundSummaryWords;
       const nextScores = [...s.scores];
       nextScores[s.currentTeamIndex] =
         (nextScores[s.currentTeamIndex] ?? 0) + 1;
-      return { ...s, wordIndex: nextIdx, scores: nextScores };
+      if (s.timerExpiredGrace) {
+        return {
+          ...s,
+          roundSummaryWords: nextWords,
+          scores: nextScores,
+          phase: 'roundEnded',
+          timerExpiredGrace: false,
+        };
+      }
+      return {
+        ...s,
+        roundSummaryWords: nextWords,
+        wordIndex: advanceWord(s.words, s.wordIndex),
+        scores: nextScores,
+      };
     });
   }, [advanceWord]);
 
@@ -142,13 +187,28 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       if (s.phase !== 'playing') {
         return s;
       }
+      const entry = s.words[s.wordIndex];
+      const nextWords =
+        entry != null
+          ? [...s.roundSummaryWords, { entry, guessed: false }]
+          : s.roundSummaryWords;
       const nextScores = [...s.scores];
       if (s.skipPenalizesScore && s.teamCount) {
         const i = s.currentTeamIndex;
         nextScores[i] = (nextScores[i] ?? 0) - 1;
       }
+      if (s.timerExpiredGrace) {
+        return {
+          ...s,
+          roundSummaryWords: nextWords,
+          scores: nextScores,
+          phase: 'roundEnded',
+          timerExpiredGrace: false,
+        };
+      }
       return {
         ...s,
+        roundSummaryWords: nextWords,
         wordIndex: advanceWord(s.words, s.wordIndex),
         scores: nextScores,
       };
@@ -170,6 +230,8 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         words,
         wordIndex: 0,
         timerSessionId: s.timerSessionId + 1,
+        timerExpiredGrace: false,
+        roundSummaryWords: [],
       };
     });
   }, []);
@@ -190,9 +252,12 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       timerSessionId: state.timerSessionId,
       roundSeconds: state.roundSeconds,
       skipPenalizesScore: state.skipPenalizesScore,
+      timerExpiredGrace: state.timerExpiredGrace,
+      roundSummaryWords: state.roundSummaryWords,
       prepareGame,
       startRound,
       endRound,
+      notifyTimerExpired,
       guessWord,
       skipWord,
       nextRound,
@@ -203,6 +268,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       prepareGame,
       startRound,
       endRound,
+      notifyTimerExpired,
       guessWord,
       skipWord,
       nextRound,
@@ -210,9 +276,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     ],
   );
 
-  return (
-    <GameContext.Provider value={value}>{children}</GameContext.Provider>
-  );
+  return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 }
 
 export function useGame() {

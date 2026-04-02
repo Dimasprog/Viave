@@ -1,0 +1,174 @@
+# food — alimente și băuturi din Biblie (Cornilescu / NTR); RU — sinodală
+pâine|хлеб
+pâine dospită|квашной хлеб
+pâine nedospită|пресный хлеб
+azimă|опресноки
+turte|лепёшки
+turte prăjite|жареные лепёшки
+făină|мука
+aluat|тесто
+grâu|пшеница
+orz|ячмень
+mei|пшено
+ovăz|овёс
+secară|рожь
+linte|чечевица
+mazăre|горох
+fasole|фасоль
+năut|нут
+smochin|инжир
+smochine|инжиры
+smochină uscată|сушёный инжир
+struguri|виноград
+boabe de struguri|виноградные ягоды
+must|сусло
+vin|вино
+vin nou|вино новое
+vin vechi|вино старое
+vin amestecat|вино смешанное
+otet|уксус
+rodie|гранат
+rodii|гранаты
+măslin|олива
+măsline|оливки
+ulei de măsline|оливковое масло
+untdelemn|елей
+unt|масло
+miere|мёд
+miere din stâncă|мёд из скалы
+lapte|молоко
+lapte de oaie|овечье молоко
+lapte de capră|козье молоко
+brânză|сыр
+ou|яйцо
+ouă|яйца
+sare|соль
+carne|мясо
+carne friptă|жареное мясо
+carne fiartă|варёное мясо
+carne sărată|солёное мясо
+pește|рыба
+pește fript|жареная рыба
+pește prăjit|жареная рыба
+pește sărat|солёная рыба
+curmale|финики
+curmal|финик
+nuci|орехи
+migdale|миндаль
+stafide|изюм
+mană|мanna
+pâine din cer|хлеб небесный
+apă|вода
+apă vie|живая вода
+apă dulce|пресная вода
+apă sărată|солёная вода
+apă de izvor|родниковая вода
+ceapă|лук
+usturoi|чеснок
+praz|лук-порей
+pepene|арбуз
+castravete|огурец
+salată sălbatică|дикий салат
+verdețuri|зелень
+legume|овощи
+fructe|плоды
+roade|плоды
+grâu cules|убранная пшеница
+snopi de grâu|снопы пшеницы
+spice de grâu|колосья пшеницы
+orz prăjit|жареный ячмень
+grâu prăjit|жареная пшеница
+tărâțe|отруби
+făină de grâu|пшеничная мука
+făină de orz|ячменная мука
+pâine de orz|ячменный хлеб
+turte de orz|ячменные лепёшки
+băutură de orz|ячменный напиток
+zeamă de carne|мясной бульон
+zeamă de oase|костный бульон
+tocană de linte|чечевичная похлёбка
+mâncare de linte|чечевичная каша
+pâine cu miere|хлеб с мёдом
+lapte cu miere|молоко с мёдом
+țară cu lapte|страна молока
+miere și unt|мёд и масло
+unt și miere|масло и мёд
+smochine coapte|спелый инжир
+struguri copți|спелый виноград
+must din struguri|виноградный сусл
+vin din struguri|виноградное вино
+vin din poame|вино из плодов
+pahar de vin|чаша вина
+pahar cu vin|чаша с вином
+pâine și vin|хлеб и вино
+pâine și pești|хлеб и рыбы
+doi pești|две рыбы
+pești și turte|рыба и лепёшки
+carne de berbec|баранина
+carne de vițel|телятина
+carne de bou|говядина
+carne de capră|козлятина
+carne de oaie|баранина
+carne de porc|свинина
+carne de pasăre|птичье мясо
+pasăre friptă|жареная птица
+miel fript|жареный агнец
+miel fiert|варёный агнец
+vițel îngrășat|упитанный телёнок
+jertfă de mâncare|жертва пищи
+pâine pentru preoți|хлеб для священников
+pâine pentru închinare|хлеб поклонения
+turte pentru sărbătoare|праздничные лепёшки
+azimă de Paști|пасхальные опресноки
+pâine de frământare|хлеб закваски
+pâine fără frământare|пресный хлеб
+smochin din smochin|инжир с инжира
+smochin din smochini|инжир с фиговых деревьев
+smochin necoapt|неспелый инжир
+smochin stricat|испорченный инжир
+struguri din vie|виноград с лозы
+viță de vie|лоза виноградная
+butuc de viță|лоза виноградная
+must din teascur|сусл из давилен
+vin din teascur|вино из давилен
+oțet cu fiare|уксус с железом
+apă de băut|питьевая вода
+apă din fântână|вода из колодца
+apă din pârâu|вода из ручья
+apă din râu|вода из реки
+lapte din oaie|молоко от овцы
+lapte din capră|молоко от козы
+brânză de oaie|овечий сыр
+brânză de capră|козий сыр
+ou de găină|куриное яйцо
+ou fiert|варёное яйцо
+ou prăjit|жареное яйцо
+sare de pământ|соль земная
+sare de mare|морская соль
+miere din albine|мёд пчелиный
+miere din câmp|полевой мёд
+grâu din Samaria|пшеница из Самарии
+orz din Iuda|ячмень из Иудеи
+pâine din Egipt|хлеб из Египта
+mâncare din Egipt|пища из Египта
+legume din Egipt|овощи из Египта
+pepene din Egipt|арбуз из Египта
+ceapă din Egipt|лук из Египта
+usturoi din Egipt|чеснок из Египта
+miere și smochine|мёд и инжир
+smochine și curmale|инжир и финики
+nuci și migdale|орехи и миндаль
+rodii și mere|гранаты и яблоки
+mere sălbatice|дикие яблоки
+roade de pământ|плоды земли
+roade de câmp|плоды поля
+roade din grădină|плоды сада
+pâine pentru drum|хлеб в дорогу
+turte pentru drum|лепёшки в дорогу
+mâncare pentru oaste|пища для войска
+apă pentru oaste|вода для войска
+vin pentru împărat|вино для царя
+pâine pentru popor|хлеб для народа
+grâu pentru sărmani|пшеница для нищих
+pește pentru mulțime|рыба для толпы
+pâine pentru mulțime|хлеб для толпы

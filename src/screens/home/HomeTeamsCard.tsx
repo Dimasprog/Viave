@@ -5,6 +5,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
 import { useScaledSize } from '../../hooks/useScaledSize';
 import { homeScreenStyles as styles } from './homeScreenStyles';
+import { HomeOptionScroll } from './HomeOptionScroll';
 import { useHomeLayout } from './useHomeLayout';
 
 const TEAM_OPTIONS: TeamCount[] = [2, 3, 4];
@@ -24,7 +25,7 @@ export function HomeTeamsCard({ teamCount, onSelectTeamCount }: Props) {
       <Text style={styles.label} accessibilityRole="header">
         {t('teams_label')}
       </Text>
-      <View style={styles.row}>
+      <HomeOptionScroll>
         {TEAM_OPTIONS.map(n => (
           <Pressable
             key={n}
@@ -43,7 +44,7 @@ export function HomeTeamsCard({ teamCount, onSelectTeamCount }: Props) {
             </Text>
           </Pressable>
         ))}
-      </View>
+      </HomeOptionScroll>
     </View>
   );
 }

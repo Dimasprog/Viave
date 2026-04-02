@@ -9,6 +9,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import type { TranslationKey } from '../../i18n/translations';
 import { useScaledSize } from '../../hooks/useScaledSize';
 import { homeScreenStyles as styles } from './homeScreenStyles';
+import { HomeOptionScroll } from './HomeOptionScroll';
 import { useHomeLayout } from './useHomeLayout';
 
 type Props = {
@@ -26,7 +27,7 @@ export function HomeCategoryCard({ category, onSelectCategory }: Props) {
       <Text style={styles.label} accessibilityRole="header">
         {t('category_label')}
       </Text>
-      <View style={styles.wrap}>
+      <HomeOptionScroll>
         {WORD_CATEGORY_IDS.map(id => (
           <Pressable
             key={id}
@@ -45,7 +46,7 @@ export function HomeCategoryCard({ category, onSelectCategory }: Props) {
             </Text>
           </Pressable>
         ))}
-      </View>
+      </HomeOptionScroll>
     </View>
   );
 }

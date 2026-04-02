@@ -1,10 +1,14 @@
 import type { LanguageCode } from '../i18n/types';
 import type { WordCategoryId } from './categories';
 import {
+  BULK_ANIMALS,
+  BULK_FOOD,
   BULK_LIFE,
   BULK_NAMES,
   BULK_NATURE,
+  BULK_OBJECTS,
   BULK_PLACES,
+  BULK_ROLES,
 } from './words_bulk';
 
 export type WordEntry = {
@@ -122,6 +126,42 @@ const NATURE_CORE: WordEntry[] = [
   { ro: 'liliac', ru: 'лилия' },
 ];
 
+const ANIMALS_CORE: WordEntry[] = [
+  { ro: 'leu', ru: 'лев' },
+  { ro: 'măgar', ru: 'осёл' },
+  { ro: 'cămilă', ru: 'верблюд' },
+  { ro: 'porumbel', ru: 'голубь' },
+  { ro: 'corb', ru: 'ворон' },
+  { ro: 'vultur', ru: 'орёл' },
+];
+
+const OBJECTS_CORE: WordEntry[] = [
+  { ro: 'arc', ru: 'лук' },
+  { ro: 'sabie', ru: 'меч' },
+  { ro: 'chivot', ru: 'ковчег' },
+  { ro: 'menorah', ru: 'менора' },
+  { ro: 'potir', ru: 'чаша' },
+  { ro: 'șofar', ru: 'шофар' },
+];
+
+const FOOD_CORE: WordEntry[] = [
+  { ro: 'pâine', ru: 'хлеб' },
+  { ro: 'azimă', ru: 'опресноки' },
+  { ro: 'miere', ru: 'мёд' },
+  { ro: 'vin', ru: 'вино' },
+  { ro: 'untdelemn', ru: 'елей' },
+  { ro: 'sare', ru: 'соль' },
+];
+
+const ROLES_CORE: WordEntry[] = [
+  { ro: 'prooroc', ru: 'пророк' },
+  { ro: 'preot', ru: 'священник' },
+  { ro: 'apostol', ru: 'апостол' },
+  { ro: 'păstor', ru: 'пастыр' },
+  { ro: 'împărat', ru: 'царь' },
+  { ro: 'judecător', ru: 'судья' },
+];
+
 function uniqueWords(entries: WordEntry[]): WordEntry[] {
   const seen = new Set<string>();
   const out: WordEntry[] = [];
@@ -139,12 +179,20 @@ const NAMES: WordEntry[] = uniqueWords([...NAMES_CORE, ...BULK_NAMES]);
 const PLACES: WordEntry[] = uniqueWords([...PLACES_CORE, ...BULK_PLACES]);
 const LIFE: WordEntry[] = uniqueWords([...LIFE_CORE, ...BULK_LIFE]);
 const NATURE: WordEntry[] = uniqueWords([...NATURE_CORE, ...BULK_NATURE]);
+const ANIMALS: WordEntry[] = uniqueWords([...ANIMALS_CORE, ...BULK_ANIMALS]);
+const OBJECTS: WordEntry[] = uniqueWords([...OBJECTS_CORE, ...BULK_OBJECTS]);
+const FOOD: WordEntry[] = uniqueWords([...FOOD_CORE, ...BULK_FOOD]);
+const ROLES: WordEntry[] = uniqueWords([...ROLES_CORE, ...BULK_ROLES]);
 
 const BY_ID: Record<Exclude<WordCategoryId, 'mix'>, WordEntry[]> = {
   names: NAMES,
   places: PLACES,
   life: LIFE,
   nature: NATURE,
+  animals: ANIMALS,
+  objects: OBJECTS,
+  food: FOOD,
+  roles: ROLES,
 };
 
 /** Fisher–Yates shuffle copy */
@@ -164,6 +212,10 @@ export function getWordsForCategory(categoryId: WordCategoryId): WordEntry[] {
       ...BY_ID.places,
       ...BY_ID.life,
       ...BY_ID.nature,
+      ...BY_ID.animals,
+      ...BY_ID.objects,
+      ...BY_ID.food,
+      ...BY_ID.roles,
     ];
     return shuffle(uniqueWords(merged));
   }

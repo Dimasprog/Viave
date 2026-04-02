@@ -7,6 +7,7 @@ import {
 import { useLanguage } from '../../context/LanguageContext';
 import { useScaledSize } from '../../hooks/useScaledSize';
 import { homeScreenStyles as styles } from './homeScreenStyles';
+import { HomeOptionScroll } from './HomeOptionScroll';
 import { useHomeLayout } from './useHomeLayout';
 
 type Props = {
@@ -27,7 +28,7 @@ export function HomeRoundTimeCard({
       <Text style={styles.label} accessibilityRole="header">
         {t('round_time_label')}
       </Text>
-      <View style={styles.row}>
+      <HomeOptionScroll>
         {ROUND_SECONDS_OPTIONS.map(sec => (
           <Pressable
             key={sec}
@@ -46,7 +47,7 @@ export function HomeRoundTimeCard({
             </Text>
           </Pressable>
         ))}
-      </View>
+      </HomeOptionScroll>
     </View>
   );
 }

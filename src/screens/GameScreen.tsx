@@ -7,29 +7,25 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import {
-  Animated,
-  BackHandler,
-  Easing,
-  ScrollView,
-  Vibration,
-  View,
-} from 'react-native';
+import { Animated, BackHandler, Easing, ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { getTribeKeysForTeamCount } from '../constants/tribes';
 import { useGame } from '../context/GameContext';
 import { useLanguage } from '../context/LanguageContext';
 import { wordAt } from '../data/words';
 import {
+  feedbackRoundEnded,
+  feedbackTimerExpired,
+} from '../haptics/roundEndHaptics';
+import {
   feedbackWordGuess,
   feedbackWordSkip,
 } from '../haptics/wordActionHaptics';
+import type { GamePhase } from '../context/GameContext';
 import type { RootStackParamList } from '../navigation/types';
-import { spacing } from '../theme';
-import { GameExitConfirmModal, GamePauseModal } from './game/GameModals';
-import { GameNextRoundButton } from './game/GameNextRoundButton';
+import { colors, spacing } from '../theme';
+import { GamePauseModal } from './game/GameModals';
 import { GameScoreBoard } from './game/GameScoreBoard';
-import { GameTimeUpBanner } from './game/GameTimeUpBanner';
 import { GameTopBar } from './game/GameTopBar';
 import { GameAnimatedWord } from './game/GameAnimatedWord';
 import { GameWordActionButton } from './game/GameWordActionButton';
@@ -50,29 +46,38 @@ export function GameScreen({ navigation }: Props) {
     timerSessionId,
     roundSeconds,
     startRound,
-    endRound,
+    notifyTimerExpired,
     guessWord,
     skipWord,
     resetGame,
   } = useGame();
 
+  const prevPhaseRef = useRef<GamePhase>(phase);
+
+  useLayoutEffect(() => {
+    const prev = prevPhaseRef.current;
+    if (phase === 'roundEnded' && prev === 'playing') {
+      feedbackRoundEnded();
+    }
+    prevPhaseRef.current = phase;
+  }, [phase]);
+
+  useLayoutEffect(() => {
+    if (phase === 'roundEnded') {
+      navigation.replace('RoundSummary');
+    }
+  }, [phase, navigation]);
+
   const [paused, setPaused] = useState(false);
-  const [exitConfirmVisible, setExitConfirmVisible] = useState(false);
   const [remaining, setRemaining] = useState<number>(roundSeconds);
   const pausedRef = useRef(paused);
   const phaseRef = useRef(phase);
-  const exitConfirmVisibleRef = useRef(exitConfirmVisible);
   pausedRef.current = paused;
   phaseRef.current = phase;
-  exitConfirmVisibleRef.current = exitConfirmVisible;
 
   useFocusEffect(
     useCallback(() => {
       const onHardwareBack = () => {
-        if (exitConfirmVisibleRef.current) {
-          setExitConfirmVisible(false);
-          return true;
-        }
         if (pausedRef.current) {
           pausedRef.current = false;
           setPaused(false);
@@ -98,8 +103,6 @@ export function GameScreen({ navigation }: Props) {
     landColumnGap,
   } = useGameScreenLayout();
 
-  const expireOnce = useRef(false);
-
   const enterOpacity = useRef(new Animated.Value(0)).current;
   const enterY = useRef(new Animated.Value(18)).current;
 
@@ -122,27 +125,6 @@ export function GameScreen({ navigation }: Props) {
     ]).start();
   }, [timerSessionId, enterOpacity, enterY]);
 
-  const handleTimeUp = useCallback(() => {
-    if (pausedRef.current) {
-      return;
-    }
-    if (phaseRef.current !== 'playing') {
-      return;
-    }
-    if (expireOnce.current) {
-      return;
-    }
-    expireOnce.current = true;
-    Vibration.vibrate(400);
-    endRound();
-  }, [endRound]);
-
-  useEffect(() => {
-    if (phase === 'playing') {
-      expireOnce.current = false;
-    }
-  }, [phase]);
-
   useEffect(() => {
     if (phase !== 'playing') {
       setPaused(false);
@@ -159,14 +141,6 @@ export function GameScreen({ navigation }: Props) {
     }
 
     let intervalId: ReturnType<typeof setInterval> | null = null;
-    let completeTimeoutId: ReturnType<typeof setTimeout> | null = null;
-
-    const clearCompleteTimeout = () => {
-      if (completeTimeoutId != null) {
-        clearTimeout(completeTimeoutId);
-        completeTimeoutId = null;
-      }
-    };
 
     intervalId = setInterval(() => {
       if (pausedRef.current || phaseRef.current !== 'playing') {
@@ -181,13 +155,10 @@ export function GameScreen({ navigation }: Props) {
             clearInterval(intervalId);
             intervalId = null;
           }
-          clearCompleteTimeout();
-          completeTimeoutId = setTimeout(() => {
-            completeTimeoutId = null;
-            if (!pausedRef.current && phaseRef.current === 'playing') {
-              handleTimeUp();
-            }
-          }, 0);
+          if (!pausedRef.current && phaseRef.current === 'playing') {
+            feedbackTimerExpired();
+            notifyTimerExpired();
+          }
           return 0;
         }
         return prev - 1;
@@ -198,9 +169,8 @@ export function GameScreen({ navigation }: Props) {
       if (intervalId != null) {
         clearInterval(intervalId);
       }
-      clearCompleteTimeout();
     };
-  }, [phase, paused, timerSessionId, roundSeconds, handleTimeUp]);
+  }, [phase, paused, timerSessionId, roundSeconds, notifyTimerExpired]);
 
   const onTogglePause = useCallback(() => {
     setPaused(p => {
@@ -216,13 +186,6 @@ export function GameScreen({ navigation }: Props) {
     }
   }, [phase, startRound]);
 
-  useEffect(() => {
-    const unsub = navigation.addListener('beforeRemove', () => {
-      resetGame();
-    });
-    return unsub;
-  }, [navigation, resetGame]);
-
   const tribeKeys =
     teamCount != null ? getTribeKeysForTeamCount(teamCount) : [];
 
@@ -232,9 +195,9 @@ export function GameScreen({ navigation }: Props) {
   const onExitToMenu = useCallback(() => {
     pausedRef.current = false;
     setPaused(false);
-    setExitConfirmVisible(false);
+    resetGame();
     navigation.navigate('Home');
-  }, [navigation]);
+  }, [navigation, resetGame]);
 
   const onResumeFromPauseModal = useCallback(() => {
     pausedRef.current = false;
@@ -252,15 +215,12 @@ export function GameScreen({ navigation }: Props) {
   }, [skipWord]);
 
   const playing = phase === 'playing';
-  const roundEnded = phase === 'roundEnded';
-
-  useEffect(() => {
-    if (!roundEnded) {
-      setExitConfirmVisible(false);
-    }
-  }, [roundEnded]);
 
   const bottomPad = Math.max(insets.bottom, spacing.lg);
+
+  if (phase === 'roundEnded') {
+    return <View style={[styles.root, { backgroundColor: colors.background }]} />;
+  }
 
   const scoreBoard = (
     <GameScoreBoard
@@ -315,7 +275,6 @@ export function GameScreen({ navigation }: Props) {
           minimumFontScale={0.45}
         />
       </View>
-      <GameTimeUpBanner variant="portrait" />
     </View>
   );
 
@@ -338,7 +297,6 @@ export function GameScreen({ navigation }: Props) {
     <View style={[styles.footer, { paddingBottom: bottomPad }]}>
       {scoreBoard}
       {actionRowPortrait}
-      <GameNextRoundButton compact={false} />
     </View>
   );
 
@@ -350,7 +308,6 @@ export function GameScreen({ navigation }: Props) {
         paused={paused}
         phase={phase}
         onTogglePause={onTogglePause}
-        onRequestExitConfirm={() => setExitConfirmVisible(true)}
       />
       <Animated.View
         style={[
@@ -376,7 +333,6 @@ export function GameScreen({ navigation }: Props) {
                   bounces
                 >
                   {wordAreaLandscape}
-                  <GameTimeUpBanner variant="landscape" />
                   <View style={styles.landScoreScrollWrap}>{scoreBoard}</View>
                 </ScrollView>
               </View>
@@ -389,7 +345,6 @@ export function GameScreen({ navigation }: Props) {
               >
                 <View style={styles.landRightStack}>
                   {actionColumnLandscape}
-                  <GameNextRoundButton compact />
                 </View>
               </View>
             </View>
@@ -406,12 +361,6 @@ export function GameScreen({ navigation }: Props) {
         visible={paused}
         onResume={onResumeFromPauseModal}
         onExitToMenu={onExitToMenu}
-      />
-
-      <GameExitConfirmModal
-        visible={exitConfirmVisible}
-        onDismiss={() => setExitConfirmVisible(false)}
-        onConfirmExit={onExitToMenu}
       />
     </View>
   );

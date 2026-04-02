@@ -3,6 +3,7 @@ import { Pressable, Text, View } from 'react-native';
 import { useLanguage } from '../../context/LanguageContext';
 import { useScaledSize } from '../../hooks/useScaledSize';
 import { homeScreenStyles as styles } from './homeScreenStyles';
+import { HomeOptionScroll } from './HomeOptionScroll';
 import { useHomeLayout } from './useHomeLayout';
 
 type Props = {
@@ -23,7 +24,7 @@ export function HomeSkipRuleCard({
       <Text style={styles.label} accessibilityRole="header">
         {t('skip_rule_label')}
       </Text>
-      <View style={styles.row}>
+      <HomeOptionScroll>
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={t('skip_rule_yes')}
@@ -54,7 +55,7 @@ export function HomeSkipRuleCard({
             {t('skip_rule_no')}
           </Text>
         </Pressable>
-      </View>
+      </HomeOptionScroll>
     </View>
   );
 }

@@ -3,6 +3,7 @@ import { Pressable, Text, View } from 'react-native';
 import { useLanguage } from '../../context/LanguageContext';
 import { useScaledSize } from '../../hooks/useScaledSize';
 import { homeScreenStyles as styles } from './homeScreenStyles';
+import { HomeOptionScroll } from './HomeOptionScroll';
 import { useHomeLayout } from './useHomeLayout';
 
 export function HomeLanguageCard() {
@@ -15,7 +16,7 @@ export function HomeLanguageCard() {
       <Text style={styles.label} accessibilityRole="header">
         {t('language_label')}
       </Text>
-      <View style={styles.row}>
+      <HomeOptionScroll>
         {(['ro', 'ru'] as const).map(lang => (
           <Pressable
             key={lang}
@@ -35,7 +36,7 @@ export function HomeLanguageCard() {
             </Text>
           </Pressable>
         ))}
-      </View>
+      </HomeOptionScroll>
     </View>
   );
 }

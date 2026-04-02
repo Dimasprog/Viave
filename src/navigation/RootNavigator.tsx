@@ -4,6 +4,7 @@ import React from 'react';
 import BootSplash from 'react-native-bootsplash';
 import { GameScreen } from '../screens/GameScreen';
 import { HomeScreen } from '../screens/HomeScreen';
+import { RoundSummaryScreen } from '../screens/RoundSummaryScreen';
 import { fonts } from '../theme';
 import type { RootStackParamList } from './types';
 
@@ -34,6 +35,11 @@ export function RootNavigator() {
         <Stack.Screen
           name="Game"
           component={GameScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="RoundSummary"
+          component={RoundSummaryScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

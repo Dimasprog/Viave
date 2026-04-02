@@ -7,6 +7,7 @@ export const gameScreenStyles = StyleSheet.create({
     backgroundColor: colors.background,
   },
   topBar: {
+    position: 'relative',
     flexDirection: 'row',
     alignItems: 'center',
     paddingBottom: spacing.sm,
@@ -14,15 +15,62 @@ export const gameScreenStyles = StyleSheet.create({
     borderBottomColor: colors.border,
     backgroundColor: colors.surface,
   },
+  topBarTimerCenter: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 0,
+  },
+  topBarRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    zIndex: 1,
+  },
+  topBarFlexSpacer: {
+    flex: 1,
+  },
   topBarSide: {
     width: 48,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  topBarCenter: {
-    flex: 1,
+  topBarSideLang: {
+    flexShrink: 0,
+    minWidth: 108,
+    maxWidth: 140,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: spacing.xs,
+  },
+  langRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  langCol: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 6,
+  },
+  langChip: {
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.surfaceElevated,
+  },
+  langChipSelected: {
+    borderColor: colors.accent,
+    backgroundColor: colors.chipSelected,
+  },
+  langChipPressed: {
+    opacity: 0.9,
+  },
+  langChipText: {
+    fontFamily: fonts.bold,
+    color: colors.text,
   },
   timerDimmed: {
     opacity: 0.55,
@@ -343,18 +391,5 @@ export const gameScreenStyles = StyleSheet.create({
   pauseSecondaryTextMuted: {
     color: colors.text,
     fontFamily: fonts.bold,
-  },
-  exitConfirmDangerBtn: {
-    backgroundColor: colors.danger,
-    paddingVertical: spacing.md + 2,
-    borderRadius: 14,
-    alignItems: 'center',
-  },
-  exitConfirmDangerBtnPressed: {
-    opacity: 0.9,
-  },
-  exitConfirmDangerText: {
-    color: '#fff',
-    fontFamily: fonts.extraBold,
   },
 });

@@ -2,8 +2,9 @@
 leu|лев
 oaie|овца
 berbec|баран
-ied|козлёнок
 capră|коза
+ied|козлёнок
+vițel|телёнок
 bou|вол
 măgar|осёл
 cal|конь
@@ -11,33 +12,22 @@ cămilă|верблюд
 porumbel|голубь
 corb|ворон
 vultur|орёл
-bufniță|сова
+vrabie|воробей
 rândunică|ласточка
+cocoș|петух
 șarpe|змей
 pește|рыба
 balenă|кит
-rechin|акула
 broască|лягушка
-țestoasă|черепаха
-șopârlă|ящерица
 furnică|муравей
-albină|пчела
-bondar|шмель
-țânțar|комар
+lăcustă|саранча
 musca|муха
 molie|моль
 gândac|жук
-lăcustă|саранча
-omida|гусеница
-fluture|бабочка
-paianjen|паук
-scorpion|скорпион
-melc|улитка
 vierme|червь
 grâu|пшеница
 orz|ячмень
 secară|рожь
-mei|пшено
 linte|чечевица
 năut|нут
 fasole|фасоль
@@ -46,206 +36,96 @@ smochin|инжир
 măslin|олива
 viță|лоза
 rodie|гранат
-măr|яблоня
-păr|груша
-palmier|пальма
 cedru|кедр
-brad|пихта
-stejar|дуб
-platan|платан
-salcâm|акация
-liliac|лилия
-trandafir|роза
-narcisă|нарцисс
+isop|иссоп
+mustar|горчица
 crin|лилия
+trandafir|роза
 busuioc|базилик
-mentă|мята
-cimbru|чабрец
-mărar|укроп
-țelină|сельдерей
-morcov|морковь
-ridiche|редька
-castravete|огурец
-dovleac|тыква
-pepene|арбуз
-strugure|виноград
 stea|звезда
 soare|солнце
 lună|луна
 nor|облако
 fulger|молния
 tunet|гром
-potop|потоп
 foc|огонь
 flacără|пламя
-jar|жар
-cenușă|пепел
-fum|дым
 ploaie|дождь
 grindină|град
 zăpadă|снег
-ger|мороз
-ceață|туман
 vânt|ветер
 furtună|буря
 mare|море
-ocean|океан
-lac|озеро
 râu|река
-pârâu|ручей
 izvor|источник
 fântână|колодец
-puț|колодец
 munte|гора
-deal|холм
 vale|долина
 pustie|пустыня
-stepă|степь
-câmpie|равнина
-pădure|лес
-tufiș|куст
-spini|тернии
-măceș|шип
-pietre|камни
+stâncă|скала
 nisip|песок
-argilă|глина
+porc|свинья
+câine|пёс
+urs|медведь
+lup|волк
+vulpe|лиса
+cerb|олень
+iepure|заяц
+gâscă|гусь
+rață|утка
+curcan|индюк
+găină|курица
+cocoș de pădure|лесной петух
+șoarece|мышь
+țestoasă|черепаха
+șopârlă|ящерица
+paianjen|паук
+scorpion|скорпион
+melc|улитка
+palmier|пальма
+smochin de grădină|садовый инжир
+măslin de munte|горная олива
+strugure|виноград
+must|виноградный сок
+vin nou|молодое вино
+stejar|дуб
+brad|ель
+salcâm|акация
+platan|платан
+papirus|папирус
+trestie|тростник
+spic de grâu|колос пшеницы
+țintirim|полынь
+pelin|полынь
+busuioc de câmp|полевой базилик
+mărar de deal|горный укроп
+frunză de smochin|лист смоквы
+coajă de copac|кора дерева
+oase uscate|сухие кости
+rouă de cer|роса небесная
+grindină din cer|град с неба
+ceață din dimineață|утренний туман
+furtună din mare|буря на море
+vânt de est|восточный ветер
+vânt de vest|западный ветер
+prăpastie|пропасть
+abis|бездна
+val|волна
+spumă|пена
+nămol|тина
+țărm|берег
 aur|золото
 argint|серебро
 aramă|медь
 fier|железо
-plumb|свинец
-staniu|олово
 piatră|камень
 cristal|кристалл
 perle|жемчуг
-scoici|ракушки
-nămol|тина
-țărm|берег
-stâncă|скала
-prăpastie|пропасть
-abis|бездна
+jar|жар
+cenușă|пепел
+fum|дым
+ger|мороз
+ceață|туман
 adânc|глубина
-val|волна
-spumă|пена
-alge|водоросли
-trestie|тростник
-papirus|папирус
-lotus|лотос
-nufăr|кувшинка
-iris|ирис
-viorea|фиалка
-mac|мак
-lup|волк
-vulpe|лиса
-urs|медведь
-cerb|олень
-căprioară|косуля
-iepure|заяц
-șoarece|мышь
-șobolan|крыса
-câine|собака
-pisică|кошка
-porc|свинья
-găină|курица
-cocoș|петух
-rață|утка
-gâscă|гусь
-curcan|индюк
 porumb|кукуруза
-grâu de primăvară|яровая пшеница
-orz de toamnă|озимый ячмень
-secară neagrё|чёрная рожь
-smochin sălbatic|дикий инжир
-măslin sălbatic|дикая олива
-viță de vie|виноградная лоза
-rodie de grădină|садовый гранат
-cedru de Liban|ливанский кедр
-brad de munte|горная пихта
-stejar veșnic|вечный дуб
-platan de drum|дорожный платан
-salcâm de câmp|полевая акация
-liliac de vale|долинная лилия
-trandafir de grădină|садовая роза
-narcisă de câmp|полевой нарцисс
-crin de vale|долинная лилия
-busuioc de grădină|садовый базилик
-mentă sălbatică|дикая мята
-cimbru de munte|горный чабрец
-mărar de câmp|полевой укроп
-țelină de rădăcină|корневой сельдерей
-morcov de grădină|садовая морковь
-ridiche neagră|чёрная редька
-castravete de câmp|полевой огурец
-dovleac de toamnă|осенняя тыква
-pepene verde|арбуз
-strugure de masă|столовый виноград
-soare de amiază|полуденное солнце
-lună plină|полная луна
-lună nouă|новолуние
-nor de furtună|грозовое облако
-fulger de sus|небесная молния
-tunet de departe|далёкий гром
-potop de ape|водяной потоп
-foc din cer|огонь с неба
-flacără veșnică|вечное пламя
-jar de altar|жар жертвенника
-cenușă de jertfă|пепел жертвы
-fum de tămâie|дым кадила
-ploaie târzie|поздний дождь
-grindină de vară|летний град
-zăpadă de iarnă|зимний снег
-ger de pustie|пустынный мороз
-ceață de dimineață|утренний туман
-vânt de est|восточный ветер
-vânt de vest|западный ветер
-vânt de nord|северный ветер
-vânt de sud|южный ветер
-furtună pe mare|буря на море
-mare agitată|волнующееся море
-ocean întins|просторный океан
-lac liniștit|тихое озеро
-râu limpede|прозрачная река
-pârâu zgomotos|шумный ручей
-izvor dulce|сладкий источник
-fântână adâncă|глубокий колодец
-puț sec|сухой колодец
-munte înalt|высокая гора
-deal domol|кроткий холм
-vale umbrită|тенистая долина
-pustie fierbinte|жаркая пустыня
-stepă uscată|сухая степь
-câmpie verde|зелёная равнина
-pădure deș|дубрава
-tufiș de spini|терновый куст
-spini ascuțiți|острые тернии
-măceș sălbatic|дикий шип
-pietre ascuțite|острые камни
-nisip mișcător|движущийся песок
-argilă umedă|влажная глина
-aur curat|чистое золото
-argint curat|чистое серебро
-aramă lucioasă|блестящая медь
-fier roșu|красное железо
-plumb greu|тяжёлый свинец
-staniu strălucitor|блестящее олово
-piatră de hotar|рубежный камень
-cristal curat|чистый кристалл
-perle scumpe|дорогой жемчуг
-scoici marine|морские ракушки
-nămol adânc|глубокая тина
-țărm nisipos|песчаный берег
-stâncă tare|твёрдая скала
-prăpastie adâncă|глубокая пропасть
-abis întunecat|тёмная бездна
-adânc de mare|морская глубина
-val înaltă|высокая волна
-spumă albă|белая пена
-alge verzi|зелёные водоросли
-trestie de râu|речной тростник
-papirus de Nil|нильский папирус
-lotus de apă|водяной лотос
-nufăr de lac|озёрная кувшинка
-iris de câmp|полевой ирис
-viorea de primăvară|весенняя фиалка
-mac roșu|красный мак
-brad de sărbătoare|праздничная пихта
+dafin|лавр

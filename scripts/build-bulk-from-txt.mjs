@@ -42,6 +42,10 @@ const names = parse('names');
 const places = parse('places');
 const life = parse('life');
 const nature = parse('nature');
+const animals = parse('animals');
+const objects = parse('objects');
+const food = parse('food');
+const roles = parse('roles');
 
 const header = `/**
  * Generat de scripts/build-bulk-from-txt.mjs — nu edita manual array-urile mari.
@@ -54,11 +58,24 @@ const body = [
   emitTs('BULK_PLACES', places),
   emitTs('BULK_LIFE', life),
   emitTs('BULK_NATURE', nature),
+  emitTs('BULK_ANIMALS', animals),
+  emitTs('BULK_OBJECTS', objects),
+  emitTs('BULK_FOOD', food),
+  emitTs('BULK_ROLES', roles),
 ].join('\n');
 
 const outPath = path.join(__dirname, '../src/data/words_bulk.ts');
 fs.writeFileSync(outPath, header + body, 'utf8');
 
+const total =
+  names.length +
+  places.length +
+  life.length +
+  nature.length +
+  animals.length +
+  objects.length +
+  food.length +
+  roles.length;
 console.error(
-  `Wrote ${outPath}: names=${names.length} places=${places.length} life=${life.length} nature=${nature.length} total=${names.length + places.length + life.length + nature.length}`,
+  `Wrote ${outPath}: names=${names.length} places=${places.length} life=${life.length} nature=${nature.length} animals=${animals.length} objects=${objects.length} food=${food.length} roles=${roles.length} total=${total}`,
 );

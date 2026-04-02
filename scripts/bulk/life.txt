@@ -1,117 +1,99 @@
 # life
-adevăr|истина
-ascultare|послушание
-binecuvântare|благословение
-blestem|проклятие
-botez|крещение
-chemare|призвание
-cină|вечеря
-comuniune|общение
-consecrare|освящение
-consolare|утешение
-credință|вера
-credincioșie|верность
-cântare|песнопение
-cântec|песнь
-descoperire|откровение
-discernământ|различение
-dăruire|дарение
-evanghelie|благовестие
-exil|изгнание
-exod|исход
-facere|творение
-fecioară|дева
-ființă|сущность
-fiu|сын
-frățietate|братство
-glas|глас
-glorie|слава
-har|благодать
-iertare|прощение
-închinare|поклонение
-înfrânare|воздержание
-înnoire|обновление
-înțelepciune|мудрость
-înviere|воскресение
-înălțare|вознесение
-jertfă|жертва
-judecată|суд
-laudă|хвала
-legământ|завет
-lege|закон
-lumină|свет
-mărturisire|исповедание
-mărturie|свидетельство
-milă|милость
-minciună|ложь
-minune|чудо
-nădejde|надежда
-pace|мир
-pocăință|покаяние
-poruncă|заповедь
-post|пост
-priveghere|бодрствование
-propovăduire|проповедь
-părtășie|общение
-păstorire|пастырство
-păzire|хранение
-răbdare|терпение
-răscumpărare|искупление
-răscumpărător|искупитель
-rânduială|устав
 rugăciune|молитва
-sabat|суббота
+post|пост
+credință|вера
+nădejde|надежда
+dragoste|любовь
+har|благодать
+milă|милость
+adevăr|истина
+pace|мир
 sfințenie|святость
-sfințire|освящение
-slujire|служение
-slavă|слава
-smerenie|смирение
-spovedanie|исповедь
-tămăduire|исцеление
-ucenicie|ученичество
-unire|единение
-unitate|единство
-veghere|бодрствование
-vestire|возвещение
-viață|жизнь
-vindecare|исцеление
-virtute|добродетель
-voință|воля
-îndurare|долготерпение
+ascultare|послушание
+închinare|поклонение
+laudă|хвала
+mulțumire|благодарение
+legământ|завет
+jertfă|жертва
+iertare|прощение
+pocăință|покаяние
+mântuire|спасение
+răscumpărare|искупление
+ispășire|умилостивление
 îndreptățire|оправдание
-împăcare|примирение
-împărăție|царство
-împărtășanie|причастие
-întoarcere|обращение
-întărire|укрепление
-învățătură|учение
-învățător|учитель
-făgăduință|обетование
-judecată de apoi|страшный суд
-pogorâre Duh|схождение Духа
-înălțare la cer|вознесение на небо
-cina Domnului|вечеря Господня
+sfințire|освящение
+înviere|воскресение
+judecată|суд
+slujire|служение
+proorocie|пророчество
+înțelepciune|мудрость
+discernământ|различение
+adevăr de credință|истина веры
+frică de Dumnezeu|страх Божий
+Duhul Sfânt|Святой Дух
+Cuvântul lui Dumnezeu|Слово Божье
+Cina Domnului|Вечеря Господня
+botez cu apă|крещение водой
+naștere din nou|рождение свыше
+fapte bune|добрые дела
+porunca iubirii|заповедь любви
+fiu risipitor|блудный сын
+bun samaritean|добрый самарянин
 pâinea vieții|хлеб жизни
 apa vie|живая вода
-sângele jertfei|кровь жертвы
-trupul lui Hristos|тело Христово
-Duhul Sfânt|Святой Дух
-Cuvântul|Слово
+roada Duhului|плод Духа
+armura lui Dumnezeu|всеоружие Божье
+calea îngustă|узкий путь
+poarta strâmtă|тесные врата
+împărăția cerurilor|царство небесное
+venirea Domnului|пришествие Господа
+viață veșnică|вечная жизнь
+evanghelie|благовестие
 Scriptura|Писание
-Evanghelia|Евангелие
-Vechiul Testament|Ветхий Завет
-Noul Testament|Новый Завет
-Legea lui Moise|закон Моисеев
-porunca iubirii|заповедь любви
-porunca credinței|заповедь веры
-porunca nădejdii|заповедь надежды
-porunca dragostei|заповедь любви
-iubire de aproape|любовь к ближнему
-iubire de vrăjmaș|любовь к врагу
+Legea|закон
+prooroci|пророки
+apostoli|апостолы
+ucenici|ученики
+preot|священник
+levit|левит
+arhiereu|первосвященник
+păstor|пастырь
+turmă|стадо
+templu|храм
+cort|скиния
+chivot|ковчег
+altar|жертвенник
+tămâie|ладан
+Sabat|суббота
+răscumpărător|искупитель
+mijlocitor|ходатай
+răbdare|терпение
+îndurare|долготерпение
 milostenie|милостыня
-dreptate|правда
-socotire duhovnicească|духовный счёт
-tărie în credință|крепость в вере
-zgârci duhovnicesc|духовная скупость
-zidire duhovnicească|духовное созидание
-zălog duhovnicesc|духовный залог
+smerenie|смирение
+osârdie|усердие
+râvnă|ревность
+evlavie|благочестие
+înălțare|вознесение
+pogorâre|нисхождение
+descoperire|откровение
+taină|тайна
+binecuvântare|благословение
+blestem|проклятие
+făgăduință|обетование
+jurământ|клятва
+ascultare de glas|послушание гласу
+umblare în lumină|хождение во свете
+unire cu Hristos|единение со Христом
+umblare cu Dumnezeu|хождение с Богом
+roadă de dreptate|плод праведности
+sâmbure de muștar|зерно горчичное
+sare de pământ|соль земная
+învierea morților|воскресение мёртвых
+ziua Domnului|день Господень
+trup duhovnicesc|духовное тело
+suflet viu|живая душа
+sânge de jertfă|кровь жертвы
+împărtășanie de sânge|причастие крови
+Cuvânt de viață|слово жизни
+Duh de putere|Дух силы
