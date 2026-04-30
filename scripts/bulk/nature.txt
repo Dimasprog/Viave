@@ -75,7 +75,6 @@ gâscă|гусь
 rață|утка
 curcan|индюк
 găină|курица
-cocoș de pădure|лесной петух
 șoarece|мышь
 țestoasă|черепаха
 șopârlă|ящерица
@@ -83,31 +82,16 @@ paianjen|паук
 scorpion|скорпион
 melc|улитка
 palmier|пальма
-smochin de grădină|садовый инжир
-măslin de munte|горная олива
 strugure|виноград
 must|виноградный сок
-vin nou|молодое вино
 stejar|дуб
 brad|ель
 salcâm|акация
 platan|платан
 papirus|папирус
 trestie|тростник
-spic de grâu|колос пшеницы
 țintirim|полынь
 pelin|полынь
-busuioc de câmp|полевой базилик
-mărar de deal|горный укроп
-frunză de smochin|лист смоквы
-coajă de copac|кора дерева
-oase uscate|сухие кости
-rouă de cer|роса небесная
-grindină din cer|град с неба
-ceață din dimineață|утренний туман
-furtună din mare|буря на море
-vânt de est|восточный ветер
-vânt de vest|западный ветер
 prăpastie|пропасть
 abis|бездна
 val|волна
@@ -129,3 +113,56 @@ ceață|туман
 adânc|глубина
 porumb|кукуруза
 dafin|лавр
+sicomor|сикомора
+terebint|теревинф
+salcie|ива
+papirus|папирус
+trestie|тростник
+pin|сосна
+laur|лавр
+rozmarin|розмарин
+nard|нард
+crin|лилия
+bujor|пион
+acacia|акация
+aloe|алоэ
+chiper|кипарис
+platan|платан
+nucă|орех
+piersică|персик
+cireș|вишня
+par|груша
+gutui|айва
+curmale|финик
+rodie|гранат
+castravete|огурец
+pepene|арбуз
+ceapă|лук
+usturoi|чеснок
+promoroacă|иней
+rouă|роса
+ceață|туман
+negură|мгла
+zăpadă|снег
+grindină|град
+potop|потоп
+curcubeu|радуга
+pârâu|поток
+lac|озеро
+peșteră|пещера
+mormânt|гробница
+prăpastie|пропасть
+câmpie|равнина
+pajiște|пастбище
+livadă|сад
+ogradă|двор
+vie|виноградник
+praf|прах
+lut|глина
+aur|золото
+argint|серебро
+aramă|медь
+fier|железо
+piatră|камень
+nisip|песок
+sare|соль

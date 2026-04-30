@@ -8,7 +8,7 @@ import { homeScreenStyles as styles } from './homeScreenStyles';
 import { HomeOptionScroll } from './HomeOptionScroll';
 import { useHomeLayout } from './useHomeLayout';
 
-const TEAM_OPTIONS: TeamCount[] = [2, 3, 4];
+const TEAM_OPTIONS: TeamCount[] = [2, 3, 4, 5];
 
 type Props = {
   teamCount: TeamCount;

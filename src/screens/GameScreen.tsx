@@ -46,7 +46,7 @@ export function GameScreen({ navigation }: Props) {
     timerSessionId,
     roundSeconds,
     startRound,
-    notifyTimerExpired,
+    endRound,
     guessWord,
     skipWord,
     resetGame,
@@ -72,6 +72,7 @@ export function GameScreen({ navigation }: Props) {
   const [remaining, setRemaining] = useState<number>(roundSeconds);
   const pausedRef = useRef(paused);
   const phaseRef = useRef(phase);
+  const remainingRef = useRef<number>(roundSeconds);
   pausedRef.current = paused;
   phaseRef.current = phase;
 
@@ -132,6 +133,7 @@ export function GameScreen({ navigation }: Props) {
   }, [phase]);
 
   useLayoutEffect(() => {
+    remainingRef.current = roundSeconds;
     setRemaining(roundSeconds);
   }, [timerSessionId, roundSeconds]);
 
@@ -140,37 +142,23 @@ export function GameScreen({ navigation }: Props) {
       return undefined;
     }
 
-    let intervalId: ReturnType<typeof setInterval> | null = null;
-
-    intervalId = setInterval(() => {
+    const intervalId = setInterval(() => {
       if (pausedRef.current || phaseRef.current !== 'playing') {
         return;
       }
-      setRemaining(prev => {
-        if (pausedRef.current || phaseRef.current !== 'playing') {
-          return prev;
-        }
-        if (prev <= 1) {
-          if (intervalId != null) {
-            clearInterval(intervalId);
-            intervalId = null;
-          }
-          if (!pausedRef.current && phaseRef.current === 'playing') {
-            feedbackTimerExpired();
-            notifyTimerExpired();
-          }
-          return 0;
-        }
-        return prev - 1;
-      });
+      remainingRef.current = Math.max(0, remainingRef.current - 1);
+      setRemaining(remainingRef.current);
+      if (remainingRef.current <= 0) {
+        clearInterval(intervalId);
+        feedbackTimerExpired();
+        endRound();
+      }
     }, 1000);
 
     return () => {
-      if (intervalId != null) {
-        clearInterval(intervalId);
-      }
+      clearInterval(intervalId);
     };
-  }, [phase, paused, timerSessionId, roundSeconds, notifyTimerExpired]);
+  }, [phase, paused, timerSessionId, roundSeconds, endRound]);
 
   const onTogglePause = useCallback(() => {
     setPaused(p => {

@@ -7,9 +7,11 @@ export type WordCategoryId =
   | 'objects'
   | 'food'
   | 'roles'
+  | 'sunday'
   | 'mix';
 
 export const WORD_CATEGORY_IDS: WordCategoryId[] = [
+  'sunday',
   'names',
   'places',
   'life',
@@ -22,6 +24,7 @@ export const WORD_CATEGORY_IDS: WordCategoryId[] = [
 ];
 
 export const CATEGORY_I18N_KEY: Record<WordCategoryId, string> = {
+  sunday: 'category_sunday',
   names: 'category_names',
   places: 'category_places',
   life: 'category_life',

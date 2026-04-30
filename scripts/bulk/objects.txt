@@ -39,7 +39,6 @@ ulcior|кувшин
 amforă|амфора
 potir|чаша
 pahar|кубок
-pahar de aur|золотая чаша
 sită|сито
 coș|корзина
 sac|мешок
@@ -58,7 +57,6 @@ tămâie|ладан
 cădelniță|кадило
 altar|жертвенник
 chivot|ковчег
-chivotul legii|ковчег завета
 menorah|менора
 sfesnic|светильник
 lampă|лампа
@@ -76,11 +74,7 @@ grindă|балка
 acoperiș|крыша
 țiglă|черепица
 piatră|камень
-piatră de hotar|рубежный камень
-piatră de moară|жернов
-pietre de moară|жернова
 moară|мельница
-presă de ulei|маслодавилка
 teasc|пресс
 covor|ковёр
 pernă|подушка
@@ -96,7 +90,6 @@ sceptru|скипетр
 tron|трон
 scaun|стул
 masă|стол
-masă de pâine|стол с хлебом
 clopot|колокол
 clopoțel|колокольчик
 trompetă|труба
@@ -118,12 +111,10 @@ colier|ожерелье
 cercel|серьга
 pecetea|печать
 inscripție|надпись
-rulou de pergament|свиток пергамента
 carte|книга
-table de piatră|скрижали каменные
 toiag|посох
-toiag lui Aaron|жезл Аарона
-toiag lui Moise|жезл Моисея
+încălțări|обувь
+sandale|сандалии
 undiță|удочка
 mreajă|сеть
 corabie|корабль
@@ -137,130 +128,100 @@ zid|стена
 cetate|крепость
 fântână|колодец
 cisternă|цистерна
-vas de aur|золотой сосуд
-vas de aramă|медный сосуд
-vas de piatră|каменный сосуд
-vas de lut|глиняный сосуд
-vas spart|разбитый сосуд
 lighean|таз
-lighean de aramă|медный таз
 căldare|ведро
 ciubăr|корыто
 fereastră|окно
 obloane|ставни
-pânză de in|льняная ткань
 efod|ефод
 pectoral|нагрудник
-jug de boi|воловье ярмо
-jug de lemn|деревянное ярмо
-funie de canepă|конопляная верёвка
-lanț de fier|железная цепь
-scut de aramă|медный щит
-coif de aramă|медный шлем
-sulița lui Goliath|копьё Голиафа
-sabia lui Goliath|меч Голиафа
-arcul lui Ionațan|лук Ионафана
-care de război|боевая колесница
-corabia lui Iona|корабль Ионы
-corabia lui Pavel|корабль Павла
-altar de aur|золотой жертвенник
-altar de aramă|медный жертвенник
-altar de piatră|каменный жертвенник
-foc de altar|огонь жертвенника
-foc de tabără|лагерный огонь
-perdea templului|завеса храма
-poarta cetății|ворота города
-ușa templului|дверь храма
-prag de ușă|порог двери
-cheia temniței|ключ от темницы
-piatră de temelie|краеугольный камень
-piatră de mormânt|гробный камень
-presă de struguri|виноградный пресс
-potir de aur|золотой потир
-potir de argint|серебряный потир
-sfesnic de aur|золотой светильник
-menorah de aur|золотая менора
-lampă de untdelemn|лампада с елеем
-coroană de aur|золотая корона
-sceptru de aur|золотой скипетр
-tron de domnie|трон царский
-masă de ospăț|пиршественный стол
-trompetă de război|военная труба
-harpă de David|арфа Давида
-talant de aur|золотой талант
-siclu de argint|серебряный сикль
-inel de sigiliu|перстень-печать
-pecetea regelui|печать царя
-rulou de lege|свиток закона
-table de legământ|скрижали завета
-toiag de păstor|посох пастыря
-mreajă de pescuit|рыболовная сеть
-turn de veghe|сторожевая башня
-zid de Ierusalim|стена Иерусалима
-porți de Ierusalim|ворота Иерусалима
-fântână din pustie|колодец в пустыне
-cisternă goală|пустая цистерна
-bloc de piatră|каменный блок
-moară de apă|водяная мельница
-moară de mână|ручная мельница
-covor de lână|шерстяной ковёр
-pernă de pene|перьевая подушка
-așternut de paie|соломенная постель
-veșmânt de in|льняная одежда
-centură de piele|кожаный пояс
-coroană de argint|серебряная корона
-masă de lemn|деревянный стол
-masă de piatră|каменный стол
-ușă de lemn|деревянная дверь
-ușă de fier|железная дверь
-stâlp de templu|столб храма
-acoperiș de paie|соломенная крыша
-grilaj de fier|железная решётка
-zăvor de fier|железный засов
-cărbuni încinși|раскалённые угли
-cădelniță de aur|золотое кадило
-pahar de argint|серебряная чаша
-lighean de apă|таз с водой
-oală de pământ|глиняный горшок
-oală de fier|железный горшок
-saci de grâu|мешки с пшеницей
-snop de grâu|сноп пшеницы
-snop de orz|сноп ячменя
-roabă de lemn|деревянная тачка
-car cu boi|повозка с волами
-șarpe de aramă|медный змей
-toiag încolăcit|скрученный посох
 cruce|крест
-cruce de lemn|деревянный крест
-inscripție pe cruce|надпись на кресте
-cuie de fier|гвозди железные
-coroana de spini|терновый венец
 mantie|мантия
-mantie fără cusătură|бесшовная риза
-suliță de oțet|копьё с уксусом
 burete|губка
-burete plin|губка, полная
-suliță de soldat|копьё воина
-scut de luptă|боевой щит
-arcuri de război|луки войны
-săgeți de război|стрелы войны
-suliți de oțel|стальные копья
-secure de luptă|боевой топор
-pumnal ascuns|скрытый кинжал
-lanț de aur|золотая цепь
-jug de fier|железное ярмо
-car cu măgari|повозка с ослами
-roți de care|колёса колесницы
-cai de care|кони колесницы
-corabie mare|большой корабль
-plută de trestie|тростниковый плот
-vâsle de corabie|вёсла корабля
-punte de piatră|каменный мост
-scară de lemn|деревянная лестница
-turn din Siloam|башня Силоамская
-zid de Ierihon|стена Иерихона
-fântână din cetate|колодец в городе
-cisternă de apă|водяная цистерна
-vas de alabastru|алебастровый сосуд
-sticlă de parfum|сосуд с миррой
-cutie de parfum|ящик с миррой
+năframă|плат
+giulgiu|плащаница
+pânză|полотно
+cort|шатёр
+manta|плащ
+nădragi|штаны
+sandală|сандалия
+papuc|башмак
+cizme|сапоги
+amuletă|амулет
+idol|идол
+sipet|ковчег
+ulcică|кувшинчик
+amforă|амфора
+coș|корзина
+canistră|кувшин
+vatră|очаг
+jăratic|жар
+scrum|пепел
+cenușă|зола
+mirodenie|пряность
+smirnă|мирра
+tămâie|ладан
+nard|нард
+aloe|алоэ
+balsam|бальзам
+mir|миро
+untdelemn|елей
+pâslă|войлок
+rogojină|рогожа
+sac|мешок
+burduf|мех
+blană|мех
+lână|шерсть
+mătase|шёлк
+in|лён
+purpură|пурпур
+stacojiu|багрянец
+vopsea|краска
+cerneală|чернила
+pergament|пергамент
+papirus|папирус
+sigiliu|печать
+ștampilă|штамп
+ciocan|молоток
+nicovală|наковальня
+foale|кузнечные меха
+clește|щипцы
+cazan|котёл
+cuptor|печь
+pivniță|погреб
+hambar|амбар
+jitniță|житница
+arie|гумно
+snop|сноп
+seceră|серп
+coasă|коса
+jug|ярмо
+plug|плуг
+sapă|мотыга
+hârlețe|лопата
+mreajă|сеть
+nasse|верша
+năvod|невод
+undiță|удочка
+barcă|лодка
+vâslă|весло
+pânză|парус
+catarg|мачта
+lest|балласт
+lanternă|фонарь
+torță|факел
+lampă|лампа
+lumânare|свеча
+fitil|фитиль
+coif|шлем
+zale|кольчуга
+pavăză|щит
+tolbă|колчан
+praștie|праща
+catapultă|катапульта
+berbec|таран
+scară|лестница
+grinzi|бревна
+frânghie|верёвка
+cheotoare|петля
+cârlig|крюк

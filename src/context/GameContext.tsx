@@ -31,7 +31,6 @@ type GameState = {
   timerSessionId: number;
   roundSeconds: RoundSecondsOption;
   skipPenalizesScore: boolean;
-  timerExpiredGrace: boolean;
   roundSummaryWords: RoundSummaryWordItem[];
 };
 
@@ -50,7 +49,6 @@ const defaultState: GameState = {
   timerSessionId: 0,
   roundSeconds: DEFAULT_ROUND_SECONDS,
   skipPenalizesScore: false,
-  timerExpiredGrace: false,
   roundSummaryWords: [],
 };
 
@@ -65,7 +63,6 @@ type GameContextValue = {
   timerSessionId: number;
   roundSeconds: RoundSecondsOption;
   skipPenalizesScore: boolean;
-  timerExpiredGrace: boolean;
   roundSummaryWords: RoundSummaryWordItem[];
   prepareGame: (
     categoryId: WordCategoryId,
@@ -75,9 +72,9 @@ type GameContextValue = {
   ) => void;
   startRound: () => void;
   endRound: () => void;
-  notifyTimerExpired: () => void;
   guessWord: () => void;
   skipWord: () => void;
+  toggleWordStatus: (index: number) => void;
   nextRound: () => void;
   resetGame: () => void;
 };
@@ -106,7 +103,6 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         timerSessionId: 0,
         roundSeconds,
         skipPenalizesScore,
-        timerExpiredGrace: false,
         roundSummaryWords: [],
       });
     },
@@ -122,26 +118,14 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         ...s,
         phase: 'playing',
         timerSessionId: s.timerSessionId + 1,
-        timerExpiredGrace: false,
       };
     });
   }, []);
 
   const endRound = useCallback(() => {
     setState(s =>
-      s.phase === 'playing'
-        ? { ...s, phase: 'roundEnded', timerExpiredGrace: false }
-        : s,
+      s.phase === 'playing' ? { ...s, phase: 'roundEnded' } : s,
     );
-  }, []);
-
-  const notifyTimerExpired = useCallback(() => {
-    setState(s => {
-      if (s.phase !== 'playing' || s.timerExpiredGrace) {
-        return s;
-      }
-      return { ...s, timerExpiredGrace: true };
-    });
   }, []);
 
   const advanceWord = useCallback((words: WordEntry[], wordIndex: number) => {
@@ -164,15 +148,6 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       const nextScores = [...s.scores];
       nextScores[s.currentTeamIndex] =
         (nextScores[s.currentTeamIndex] ?? 0) + 1;
-      if (s.timerExpiredGrace) {
-        return {
-          ...s,
-          roundSummaryWords: nextWords,
-          scores: nextScores,
-          phase: 'roundEnded',
-          timerExpiredGrace: false,
-        };
-      }
       return {
         ...s,
         roundSummaryWords: nextWords,
@@ -197,15 +172,6 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         const i = s.currentTeamIndex;
         nextScores[i] = (nextScores[i] ?? 0) - 1;
       }
-      if (s.timerExpiredGrace) {
-        return {
-          ...s,
-          roundSummaryWords: nextWords,
-          scores: nextScores,
-          phase: 'roundEnded',
-          timerExpiredGrace: false,
-        };
-      }
       return {
         ...s,
         roundSummaryWords: nextWords,
@@ -214,6 +180,38 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       };
     });
   }, [advanceWord]);
+
+  const toggleWordStatus = useCallback((index: number) => {
+    setState(s => {
+      if (s.phase !== 'roundEnded') {
+        return s;
+      }
+      const item = s.roundSummaryWords[index];
+      if (!item) {
+        return s;
+      }
+      const wasGuessed = item.guessed;
+      const newWords = s.roundSummaryWords.map((w, i) =>
+        i === index ? { ...w, guessed: !w.guessed } : w,
+      );
+      const newScores = [...s.scores];
+      const teamIdx = s.currentTeamIndex;
+      if (wasGuessed) {
+        // guessed → skipped: remove +1, optionally add -1 penalty
+        newScores[teamIdx] = (newScores[teamIdx] ?? 0) - 1;
+        if (s.skipPenalizesScore) {
+          newScores[teamIdx] = (newScores[teamIdx] ?? 0) - 1;
+        }
+      } else {
+        // skipped → guessed: add +1, optionally remove -1 penalty
+        newScores[teamIdx] = (newScores[teamIdx] ?? 0) + 1;
+        if (s.skipPenalizesScore) {
+          newScores[teamIdx] = (newScores[teamIdx] ?? 0) + 1;
+        }
+      }
+      return { ...s, roundSummaryWords: newWords, scores: newScores };
+    });
+  }, []);
 
   const nextRound = useCallback(() => {
     setState(s => {
@@ -225,12 +223,10 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       const words = getWordsForCategory(s.categoryId);
       return {
         ...s,
-        phase: 'playing',
+        phase: 'idle',
         currentTeamIndex: nextTeam,
         words,
         wordIndex: 0,
-        timerSessionId: s.timerSessionId + 1,
-        timerExpiredGrace: false,
         roundSummaryWords: [],
       };
     });
@@ -252,14 +248,13 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       timerSessionId: state.timerSessionId,
       roundSeconds: state.roundSeconds,
       skipPenalizesScore: state.skipPenalizesScore,
-      timerExpiredGrace: state.timerExpiredGrace,
       roundSummaryWords: state.roundSummaryWords,
       prepareGame,
       startRound,
       endRound,
-      notifyTimerExpired,
       guessWord,
       skipWord,
+      toggleWordStatus,
       nextRound,
       resetGame,
     }),
@@ -268,9 +263,9 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       prepareGame,
       startRound,
       endRound,
-      notifyTimerExpired,
       guessWord,
       skipWord,
+      toggleWordStatus,
       nextRound,
       resetGame,
     ],

@@ -1,23 +1,76 @@
 import { useFocusEffect } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { BackHandler, Pressable, ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AppHeader } from '../components/AppHeader';
 import { RoundSummaryGuessedIcon } from '../components/icons/RoundSummaryGuessedIcon';
 import { RoundSummaryMissedIcon } from '../components/icons/RoundSummaryMissedIcon';
-import { getTribeKeysForTeamCount } from '../constants/tribes';
-import { tribeTranslationKey } from '../constants/tribes';
+import {
+  getTribeKeysForTeamCount,
+  tribeTranslationKey,
+} from '../constants/tribes';
 import type { RoundSummaryWordItem } from '../context/GameContext';
 import { useGame } from '../context/GameContext';
 import { useLanguage } from '../context/LanguageContext';
 import { wordAt } from '../data/words';
 import type { RootStackParamList } from '../navigation/types';
-import { spacing } from '../theme';
+import { colors, fonts, spacing } from '../theme';
+import { GamePauseModal } from './game/GameModals';
+import { gameScreenStyles } from './game/gameScreenStyles';
 import { useGameScreenLayout } from './game/useGameScreenLayout';
 import { roundSummaryStyles as styles } from './roundSummaryStyles';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'RoundSummary'>;
+
+function ScoreBoard({
+  scores,
+  tribeKeys,
+  currentTeamIndex,
+  fontSize,
+}: {
+  scores: number[];
+  tribeKeys: readonly string[];
+  currentTeamIndex: number;
+  fontSize: number;
+}) {
+  const { t } = useLanguage();
+  return (
+    <View style={styles.scoreBoardContainer}>
+      <Text style={[styles.scoreBoardTitle, { fontSize: fontSize * 0.8 }]}>
+        {t('game_team_scores')}
+      </Text>
+      <View style={styles.scoreBoardRow}>
+        {tribeKeys.map((key, i) => {
+          const isActive = i === currentTeamIndex;
+          return (
+            <View
+              key={key}
+              style={[styles.scoreChip, isActive && styles.scoreChipActive]}>
+              <Text
+                style={[
+                  styles.scoreChipName,
+                  { fontSize: fontSize * 0.75 },
+                  isActive && styles.scoreChipNameActive,
+                ]}
+                numberOfLines={1}>
+                {t(tribeTranslationKey(key as Parameters<typeof tribeTranslationKey>[0]))}
+              </Text>
+              <Text
+                style={[
+                  styles.scoreChipValue,
+                  { fontSize: fontSize * 1.05 },
+                  isActive && styles.scoreChipValueActive,
+                ]}>
+                {scores[i] ?? 0}
+              </Text>
+            </View>
+          );
+        })}
+      </View>
+    </View>
+  );
+}
 
 function RoundWordRows({
   items,
@@ -26,6 +79,7 @@ function RoundWordRows({
   iconSize,
   indexFontSize,
   indexMinWidth,
+  onToggle,
 }: {
   items: RoundSummaryWordItem[];
   language: 'ro' | 'ru';
@@ -33,6 +87,7 @@ function RoundWordRows({
   iconSize: number;
   indexFontSize: number;
   indexMinWidth: number;
+  onToggle: (index: number) => void;
 }) {
   const { t } = useLanguage();
   if (items.length === 0) {
@@ -51,11 +106,16 @@ function RoundWordRows({
           : t('a11y_round_word_skipped');
         const order = i + 1;
         return (
-          <View
-            key={`${item.entry.ro}|${item.entry.ru}|${i}|${item.guessed}`}
-            style={styles.wordRow}
-            accessibilityRole="text"
-            accessibilityLabel={`${order}. ${label}. ${a11yStatus}`}>
+          <Pressable
+            key={`${item.entry.ro}|${item.entry.ru}|${i}`}
+            style={({ pressed }) => [
+              styles.wordRow,
+              pressed && styles.wordRowPressed,
+            ]}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: item.guessed }}
+            accessibilityLabel={`${order}. ${label}. ${a11yStatus}`}
+            onPress={() => onToggle(i)}>
             <Text
               style={[
                 styles.wordRowIndex,
@@ -65,7 +125,13 @@ function RoundWordRows({
               {order}.
             </Text>
             <View
-              style={[styles.wordRowIcon, { width: iconSize + 8 }]}
+              style={[
+                styles.wordRowCheck,
+                item.guessed
+                  ? styles.wordRowCheckGuessed
+                  : styles.wordRowCheckMissed,
+                { width: iconSize + 8, height: iconSize + 8 },
+              ]}
               importantForAccessibility="no">
               {item.guessed ? (
                 <RoundSummaryGuessedIcon size={iconSize} />
@@ -79,7 +145,7 @@ function RoundWordRows({
               importantForAccessibility="no">
               {label}
             </Text>
-          </View>
+          </Pressable>
         );
       })}
     </View>
@@ -92,13 +158,16 @@ export function RoundSummaryScreen({ navigation }: Props) {
   const {
     phase,
     teamCount,
+    scores,
     currentTeamIndex,
     roundSummaryWords,
+    toggleWordStatus,
     nextRound,
     resetGame,
   } = useGame();
   const { padH, padHRight, body, title } = useGameScreenLayout();
   const leavingForNextRoundRef = useRef(false);
+  const [menuVisible, setMenuVisible] = useState(false);
 
   useEffect(() => {
     if (leavingForNextRoundRef.current) {
@@ -124,8 +193,14 @@ export function RoundSummaryScreen({ navigation }: Props) {
   const onNextRound = useCallback(() => {
     leavingForNextRoundRef.current = true;
     nextRound();
-    navigation.replace('Game');
+    navigation.replace('Countdown');
   }, [nextRound, navigation]);
+
+  const onExitToMenu = useCallback(() => {
+    setMenuVisible(false);
+    resetGame();
+    navigation.navigate('Home');
+  }, [resetGame, navigation]);
 
   const tribeKeys =
     teamCount != null ? getTribeKeysForTeamCount(teamCount) : [];
@@ -146,26 +221,40 @@ export function RoundSummaryScreen({ navigation }: Props) {
     paddingTop: spacing.md,
   };
 
-  const bodyContent = (
-    <ScrollView
-      style={styles.main}
-      contentContainerStyle={[styles.scrollContent, scrollPad]}
-      showsVerticalScrollIndicator={false}
-      bounces>
-      <RoundWordRows
-        items={roundSummaryWords}
-        language={language}
-        fontSize={chipSize}
-        iconSize={iconSize}
-        indexFontSize={indexFontSize}
-        indexMinWidth={indexMinWidth}
-      />
-    </ScrollView>
-  );
-
   if (phase !== 'roundEnded' && !leavingForNextRoundRef.current) {
     return <View style={styles.root} />;
   }
+
+  const pauseButton = (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={t('game_exit')}
+      accessibilityHint={t('a11y_exit_game')}
+      onPress={() => setMenuVisible(true)}
+      style={({ pressed }) => [
+        gameScreenStyles.pauseBtn,
+        pressed && gameScreenStyles.pauseBtnPressed,
+      ]}>
+      {({ pressed }) => (
+        <View
+          style={gameScreenStyles.pauseBars}
+          importantForAccessibility="no">
+          <View
+            style={[
+              gameScreenStyles.pauseBar,
+              pressed && gameScreenStyles.pauseBarOnAccent,
+            ]}
+          />
+          <View
+            style={[
+              gameScreenStyles.pauseBar,
+              pressed && gameScreenStyles.pauseBarOnAccent,
+            ]}
+          />
+        </View>
+      )}
+    </Pressable>
+  );
 
   return (
     <View style={styles.root}>
@@ -174,8 +263,29 @@ export function RoundSummaryScreen({ navigation }: Props) {
         subtitle={
           teamName ? t('game_round_for', { team: teamName }) : undefined
         }
+        rightAction={pauseButton}
       />
-      <View style={styles.main}>{bodyContent}</View>
+      <ScrollView
+        style={styles.main}
+        contentContainerStyle={[styles.scrollContent, scrollPad]}
+        showsVerticalScrollIndicator={false}
+        bounces>
+        <RoundWordRows
+          items={roundSummaryWords}
+          language={language}
+          fontSize={chipSize}
+          iconSize={iconSize}
+          indexFontSize={indexFontSize}
+          indexMinWidth={indexMinWidth}
+          onToggle={toggleWordStatus}
+        />
+      </ScrollView>
+      <ScoreBoard
+        scores={scores}
+        tribeKeys={tribeKeys}
+        currentTeamIndex={currentTeamIndex}
+        fontSize={body}
+      />
       <View
         style={[
           styles.footer,
@@ -199,6 +309,11 @@ export function RoundSummaryScreen({ navigation }: Props) {
           </Text>
         </Pressable>
       </View>
+      <GamePauseModal
+        visible={menuVisible}
+        onResume={() => setMenuVisible(false)}
+        onExitToMenu={onExitToMenu}
+      />
     </View>
   );
 }

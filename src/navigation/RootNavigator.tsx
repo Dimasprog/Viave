@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import BootSplash from 'react-native-bootsplash';
+import { CountdownScreen } from '../screens/CountdownScreen';
 import { GameScreen } from '../screens/GameScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { RoundSummaryScreen } from '../screens/RoundSummaryScreen';
@@ -31,6 +32,11 @@ export function RootNavigator() {
           name="Home"
           component={HomeScreen}
           options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Countdown"
+          component={CountdownScreen}
+          options={{ headerShown: false, animation: 'fade' }}
         />
         <Stack.Screen
           name="Game"

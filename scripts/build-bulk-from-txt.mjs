@@ -46,6 +46,7 @@ const animals = parse('animals');
 const objects = parse('objects');
 const food = parse('food');
 const roles = parse('roles');
+const sunday = parse('sunday');
 
 const header = `/**
  * Generat de scripts/build-bulk-from-txt.mjs — nu edita manual array-urile mari.
@@ -62,6 +63,7 @@ const body = [
   emitTs('BULK_OBJECTS', objects),
   emitTs('BULK_FOOD', food),
   emitTs('BULK_ROLES', roles),
+  emitTs('BULK_SUNDAY', sunday),
 ].join('\n');
 
 const outPath = path.join(__dirname, '../src/data/words_bulk.ts');
@@ -75,7 +77,8 @@ const total =
   animals.length +
   objects.length +
   food.length +
-  roles.length;
+  roles.length +
+  sunday.length;
 console.error(
-  `Wrote ${outPath}: names=${names.length} places=${places.length} life=${life.length} nature=${nature.length} animals=${animals.length} objects=${objects.length} food=${food.length} roles=${roles.length} total=${total}`,
+  `Wrote ${outPath}: names=${names.length} places=${places.length} life=${life.length} nature=${nature.length} animals=${animals.length} objects=${objects.length} food=${food.length} roles=${roles.length} sunday=${sunday.length} total=${total}`,
 );

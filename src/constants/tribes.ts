@@ -1,6 +1,6 @@
 import type { TranslationKey } from '../i18n/translations';
 
-export type TeamCount = 2 | 3 | 4;
+export type TeamCount = 2 | 3 | 4 | 5;
 
 /** Tribe keys aligned with i18n `tribe_*` translation keys (without prefix). */
 export type TribeKey =
@@ -33,6 +33,8 @@ export function getTribeKeysForTeamCount(count: TeamCount): readonly TribeKey[] 
       return ['iuda', 'levi', 'beniamin'];
     case 4:
       return ['ruben', 'simeon', 'levi', 'iuda'];
+    case 5:
+      return ['ruben', 'simeon', 'levi', 'iuda', 'beniamin'];
     default: {
       return count;
     }

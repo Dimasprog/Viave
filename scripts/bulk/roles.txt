@@ -1,25 +1,16 @@
 # roles — funcții și titluri din Biblie (Cornilescu / NTR); RU — sinodală
 prooroc|пророк
-prooroc mincinos|лжепророк
-mare prooroc|великий пророк
 preot|священник
-mare preot|первосвященник
-preot de Baal|жрец Ваала
-preot de Moloh|жрец Молоха
 levit|левит
 judecător|судья
 împărat|царь
 regină|царица
-regină mamă|царица-мать
 prinț|князь
-prinț moștenitor|наследник престола
-prințesă moștenitoare|царевна
 vameș|мытарь
 fariseu|фарисей
 saducheu|саддукей
 scrib|писец
 învățător|учитель
-învățător de lege|учитель закона
 ucenic|ученик
 apostol|апостол
 martir|мученик
@@ -27,8 +18,6 @@ diacon|диакон
 episcop|епископ
 presbiter|пресвитер
 păstor|пастыр
-păstor de oi|пастух овец
-păstor de capre|пастух коз
 văcar|пастух коров
 plugar|пахарь
 viticultor|виноградар
@@ -44,12 +33,10 @@ satrap|сатрап
 guvernator|наместник
 centurion|сотник
 sutaș|сотник
-milițar de mie|тысячник
 ostăș|воин
 arcaș|лучник
 scutier|щитоносец
 călăreț|всадник
-șofer de care|колесничий
 slujitor|слуга
 slujitoare|служанка
 roabă|рабыня
@@ -79,240 +66,62 @@ vânător|охотник
 pădurar|лесничий
 fierar|кузнец
 topitor|литейщик
-țesător de în|льняной ткач
-țesător de lână|шерстяной ткач
 vopsitor|красильщик
 doctor|врач
 vraci|знахарь
-femeie la fântână|женщина у колодца
-bărbat la poartă|муж у ворот
-copil în templu|ребёнок в храме
-bătrân în poartă|старец у ворот
-păzitor de poartă|привратник
-păzitor de turmă|сторож стада
 străjer|страж
-soldat de gardă|часовой
-căpitan de oaste|военачальник
 consilier|советник
-slujitor de cupă|виночерпий
 ospătar|официант
-meșter de arme|оружейник
-dulgher de corabii|корабельный плотник
-negustor de vin|виноторговец
-negustor de mirodenii|торговец пряностями
-vânzător de pește|рыботорговец
-vânzător de pâine|хлеботорговец
-dascăl de sinagogă|синагогальный учитель
-dascăl de copii|учитель детей
-bătrân de cetate|старейшина города
-bătrân de seminție|старейшина колена
-judecător de țară|земной судья
-judecător de oaste|военный судья
-căpitan de corabie|капитан корабля
-căpitan de port|начальник порта
-îngrijitor de vită|смотритель скота
-îngrijitor de stupi|пчеловод
-culegător de struguri|сборщик винограда
-culegător de spice|колосник
-muncitor de ogoare|полевой работник
-muncitor de vie|виноградарь
-muncitor de moară|мельник
-muncitor de fân|сенокосец
-paznic de noapte|ночной страж
-paznic de zi|дневной страж
-străjer de poartă|привратник
-străjer de zid|страж стены
-călăreț de mesaj|грунтовой гонец
-sol de pace|мирный посол
-sol de război|военный посол
-scrib de palat|дворцовый писец
-femeie de slujire|служащая женщина
-bărbat de război|воин
-tânăr de cetate|юноша города
-fecioară de templu|храмовая дева
-văduvă săracă|бедная вдова
-văduv bogat|богатый вдовец
-orfelin de uliță|уличный сирота
-străin trecător|прохожий чужеземец
-pelerin de sărbătoare|праздничный паломник
-călător de noapte|ночной путник
-mesager de grabă|срочный вестник
-doctor de oaste|военный врач
-vraci de sat|деревенский знахарь
-arhitect de templu|храмовый архитектор
-cântăreț de psalmi|псалмопевец
-dansator de sărbătoare|праздничный танцор
-muzician de curte|придворный музыкант
 nazirit|назорей
 nazireu|назорей
-levit de poartă|левит у ворот
-preot de familie|семейный священник
-preot de seminție|священник колена
-mare-preot Ana|первосвященник Анна
-mare-preot Caiafa|первосвященник Каифа
-preot Sadoc|священник Садок
-preot Abiatar|священник Авиафар
-preot Melhisedec|священник Мелхиседек
-prooroc Samuel|пророк Самуил
-prooroc Natan|пророк Нафан
-prooroc Gad|пророк Гад
-prooroc Ilie|пророк Илия
-prooroc Elisei|пророк Елисей
-prooroc Isaia|пророк Исаия
-prooroc Ieremia|пророк Иеремия
-prooroc Daniel|пророк Даниил
-prooroc Osea|пророк Осия
-prooroc Ioil|пророк Иоиль
-prooroc Amos|пророк Амос
-prooroc Mica|пророк Михей
-prooroc Agheu|пророк Аггей
-prooroc Zaharia|пророк Захария
-prooroc Maleahi|пророк Малахия
-prooroc Ioan|пророк Иоанн
-prooroc din Betel|пророк из Вефиля
-prooroc din Iuda|пророк из Иудеи
-mincinos din Samaria|лжепророк из Самарии
-împărat David|царь Давид
-împărat Solomon|царь Соломон
-împărat Saul|царь Саул
-împărat Iosia|царь Иосия
-împărat Ezechia|царь Езекия
-împărat Manase|царь Манассия
-împărat Iosafat|царь Иосафат
-împărat Ahab|царь Ахав
-împărat Ioram|царь Иорам
-împărat Iehu|царь Иегу
-împărat Ozia|царь Озия
-împărat Iotam|царь Иофам
-împărat Ahaz|царь Ахаз
-regină Iesebel|царица Иезавель
-regină Atalia|царица Аталия
-regină Estera|царица Есфирь
-împărat Nebucadnețar|царь Навуходоносор
-împărat Belșațar|царь Валтасар
-împărat Cir|царь Кир
-împărat Darius|царь Дарий
-împărat Artaxerxe|царь Артаксеркс
-împărat Faraon|царь фараон
-împărat Irod|царь Ирод
-împărat Agripa|царь Агриппа
 proconsul|проконсул
-proconsul Sergiu|проконсул Сервий
 dregător|правитель
-dregător de sinagogă|начальник синагоги
-căpetenie de mie|тысячник
-căpetenie de oaste|военачальник
-căpetenie filisteană|филистимский вождь
-căpetenie amalecită|амаликитский вождь
-căpetenie madianită|мадианитский вождь
-judecător Otniel|судья Офниил
-judecător Ehud|судья Аод
-judecător Barac|судья Варак
-judecător Ghedeon|судья Гедеон
-judecător Iefta|судья Иеффай
-judecător Samson|судья Самсон
-judecător Samuel|судья Самуил
-slujitorul lui Moise|слуга Моисея
-slujitorul lui Ilie|слуга Илии
-slujitorul lui Elisei|слуга Елисея
-slujitorul lui Avraam|слуга Авраама
-slujitoarea lui Sara|служанка Сарры
-roaba lui Sarai|рабыня Сарры
-roaba lui Rahela|рабыня Рахили
-roaba lui Lea|рабыня Лии
-ucenicul lui Moise|ученик Моисея
-ucenicul lui Ilie|ученик Илии
-ucenicul lui Ioan|ученик Иоанна
-ucenicul lui Pavel|ученик Павла
-apostol Petru|апостол Пётр
-apostol Pavel|апостол Павел
-apostol Ioan|апостол Иоанн
-apostol Iacov|апостол Иаков
-apostol Andrei|апостол Андрей
-apostol Filip|апостол Филипп
-apostol Toma|апостол Фома
-apostol Matei|апостол Матфей
-vameș Matei|мытарь Матфей
-vameș Zacheu|мытарь Закхей
-fariseu Nicodim|фарисей Никодим
-fariseu Gamaliel|фарисей Гамалиил
-scrib Ezra|писец Ездра
-scrib din Ierusalim|писец из Иерусалима
-învățător din templu|учитель из храма
-păstor din Betleem|пастух из Вифлеема
-păstor din câmp|пастух с поля
-pescar din Galileea|рыбак из Галилеи
-meșter de corturi|мастер шатров
-meșter de metale|мастер металлов
-meșter Betaleel|мастер Веселеил
-meșter Oholiab|мастер Аголиав
-negustor din Damasc|купец из Дамаска
-negustor din Tars|купец из Тарса
-negustor de roabe|торговец рабынями
-roabă egipteană|египетская рабыня
-rob evreu|еврейский раб
-stăpân de robi|хозяин рабов
-stăpân de moșie|хозяин имения
 moșier|землевладелец
 arendaș|арендатор
 văcăreș|скотовод
-păzitor de stup|сторож улья
-păzitor de livadă|сторож сада
-păzitor de via|сторож виноградника
-străjer de noapte|ночной страж
-străjer de zi|дневной страж
-soldat roman|римский воин
-soldat iudeu|иудейский воин
-soldat asirian|ассирийский воин
-soldat babilonian|вавилонский воин
-călăreț asirian|ассирийский всадник
-călăreț egiptean|египетский всадник
-căpetenie romană|римский начальник
-căpetenie iudeană|иудейский начальник
-centurion Corneliu|сотник Корнилий
-centurion Longhin|сотник Лонгин
-eunuc la curte|дворцовый евнух
-eunuc regină|евнух царицы
-paharnic faraonului|виночерпий фараона
-bucătar faraonului|повар фараона
-consilier la curte|советник при дворе
-consilier faraon|советник фараона
-înțelept din Est|мудрец с востока
-mag din Răsărit|волхв с востока
 înger|ангел
-înger Domnului|ангел Господень
 demon|бес
-duh necurat|нечистый дух
 satan|сатана
 diavol|дьявол
-slujitor diavolului|слуга дьявола
-preot păgân|языческий жрец
-preot idolesc|идолопоклоннический жрец
 ghicitor|волхв
-ghicitor egiptean|египетский волхв
-vraci egiptean|египетский знахар
-vraci babilonian|вавилонский знахар
-doctor Luca|врач Лука
-femeie cananeancă|хананеянка
-femeie samariteancă|самарянка
-femeie din Tir|жена из Тира
-femeie din Sidon|жена из Сидона
-văduvă din Nain|вдова из Наина
-mama lui Isus|мать Иисуса
-mama lui Ioan|мать Иоанна
-tatăl lui Isus|отец Иисуса
-Iosif din Nazaret|Иосиф из Назарета
-Maria din Magdala|Мария Магдалина
-Marta din Betania|Марфа из Вифании
-Maria din Betania|Мария из Вифании
-Lazar din Betania|Лазарь из Вифании
-Simon leprosul|Симон прокажённый
-Simon din Chirene|Симон Киринеянин
-Iosif din Arimateea|Иосиф из Аримафеи
-Nicodim din Ierusalim|Никодим из Иерусалима
-Anania din Damasc|Анания из Дамаска
-Saul din Tars|Савл из Тарса
-Timotei din Listra|Тимофей из Листры
-Titus credincios|Тит верующий
-rob Onisim|Онисим раб
-stăpân Filimon|Филимон хозяин
+olar|горшечник
+arginter|серебряник
+aurar|золотых дел мастер
+cizmar|сапожник
+tăbăcar|кожевник
+pescar|рыбак
+vânător|охотник
+pădurar|лесничий
+scrib|писец
+retor|ритор
+filosof|философ
+pedagog|педагог
+trezorier|казначей
+administrator|управитель
+supraveghetor|надзиратель
+ispravnic|управляющий
+căpitar|капитан
+marinar|моряc
+corăbier|корабельщик
+călăreț|всадник
+arcaș|лучник
+luptător|боец
+gladiator|гладиатор
+temnicer|темничный страж
+pârcălab|комендант
+herold|глашатай
+crainic|вестник
+cântăreț|певец
+psalmist|псалмист
+profet|пророк
+nazireu|назорей
+ascet|аскет
+pelerin|паломник
+misionar|миссионер
+evanghelist|евангелист
+prezbiter|пресвитер
+diacon|диакон
+bătrân|старейшина
+conducător|вождь
+judecător|судья
+sfătuitor|советник

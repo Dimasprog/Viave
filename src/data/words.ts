@@ -9,6 +9,7 @@ import {
   BULK_OBJECTS,
   BULK_PLACES,
   BULK_ROLES,
+  BULK_SUNDAY,
 } from './words_bulk';
 
 export type WordEntry = {
@@ -162,6 +163,25 @@ const ROLES_CORE: WordEntry[] = [
   { ro: 'judecător', ru: 'судья' },
 ];
 
+const SUNDAY_CORE: WordEntry[] = [
+  { ro: 'Isus', ru: 'Иисус' },
+  { ro: 'Dumnezeu', ru: 'Бог' },
+  { ro: 'Adam', ru: 'Адам' },
+  { ro: 'Eva', ru: 'Ева' },
+  { ro: 'Noe', ru: 'Ной' },
+  { ro: 'David', ru: 'Давид' },
+  { ro: 'Moise', ru: 'Моисей' },
+  { ro: 'Maria', ru: 'Мария' },
+  { ro: 'dragoste', ru: 'любовь' },
+  { ro: 'pace', ru: 'мир' },
+  { ro: 'credință', ru: 'вера' },
+  { ro: 'rugăciune', ru: 'молитва' },
+  { ro: 'bucurie', ru: 'радость' },
+  { ro: 'corabie', ru: 'корабль' },
+  { ro: 'înger', ru: 'ангел' },
+  { ro: 'stea', ru: 'звезда' },
+];
+
 function uniqueWords(entries: WordEntry[]): WordEntry[] {
   const seen = new Set<string>();
   const out: WordEntry[] = [];
@@ -183,8 +203,10 @@ const ANIMALS: WordEntry[] = uniqueWords([...ANIMALS_CORE, ...BULK_ANIMALS]);
 const OBJECTS: WordEntry[] = uniqueWords([...OBJECTS_CORE, ...BULK_OBJECTS]);
 const FOOD: WordEntry[] = uniqueWords([...FOOD_CORE, ...BULK_FOOD]);
 const ROLES: WordEntry[] = uniqueWords([...ROLES_CORE, ...BULK_ROLES]);
+const SUNDAY: WordEntry[] = uniqueWords([...SUNDAY_CORE, ...BULK_SUNDAY]);
 
 const BY_ID: Record<Exclude<WordCategoryId, 'mix'>, WordEntry[]> = {
+  sunday: SUNDAY,
   names: NAMES,
   places: PLACES,
   life: LIFE,

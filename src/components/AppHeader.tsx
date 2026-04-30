@@ -7,9 +7,10 @@ import { landscapeSideExtra } from '../theme/layout';
 type Props = {
   title: string;
   subtitle?: string;
+  rightAction?: React.ReactNode;
 };
 
-export function AppHeader({ title, subtitle }: Props) {
+export function AppHeader({ title, subtitle, rightAction }: Props) {
   const insets = useSafeAreaInsets();
   const { width, height } = useWindowDimensions();
   const sideX = landscapeSideExtra(width > height);
@@ -28,14 +29,19 @@ export function AppHeader({ title, subtitle }: Props) {
         },
       ]}
       accessibilityRole="header">
-      <View style={styles.textBlock}>
-        <Text style={styles.title} accessibilityRole="header">
-          {title}
-        </Text>
-        {subtitle ? (
-          <Text style={styles.subtitle} numberOfLines={2}>
-            {subtitle}
+      <View style={styles.topRow}>
+        <View style={styles.textBlock}>
+          <Text style={styles.title} accessibilityRole="header">
+            {title}
           </Text>
+          {subtitle ? (
+            <Text style={styles.subtitle} numberOfLines={2}>
+              {subtitle}
+            </Text>
+          ) : null}
+        </View>
+        {rightAction != null ? (
+          <View style={styles.rightSlot}>{rightAction}</View>
         ) : null}
       </View>
       <View style={styles.accentRow}>
@@ -52,8 +58,18 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: colors.border,
   },
+  topRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+  },
   textBlock: {
+    flex: 1,
     gap: spacing.xs,
+  },
+  rightSlot: {
+    alignItems: 'flex-end',
+    justifyContent: 'center',
   },
   title: {
     color: colors.text,

@@ -23,7 +23,6 @@ turturică|горлица
 corb|ворон
 vultur|орёл
 bufniță|сова
-pui de bufniță|совёнок
 cocoș|петух
 găină|курица
 puică|цыплёнок
@@ -48,7 +47,6 @@ balaur|дракон
 leviatan|левиафан
 behemot|бегемот
 lăcustă|саранча
-lăcustă zburătoare|крылатая саранча
 greier|кузнечик
 furnică|муравей
 molie|моль
@@ -61,99 +59,60 @@ cerb|олень
 mistreț|кабан
 cal|конь
 catâr|мул
-măgar sălbatic|дикий осёл
 onager|онагр
 leopard|леопард
 hienă|гиена
 șacal|шакал
-măgar încăpățânat|упрямый осёл
 vițică|телка
 vacă|корова
 oiță|овечка
-berbec neprihănit|непорочный агнец
-miel de Paști|пасхальный агнец
-pești din lac|рыбы из озера
-pești din mare|рыбы из моря
-pui de păsări|птенцы
-ou de păsăre|птичье яйцо
-ou de șarpe|змеиное яйцо
-păsăre curată|чистая птица
-păsăre necurată|нечистая птица
-pasăre de pradă|хищная птица
-pasăre cântătoare|певчая птица
 leoaică|львица
-pui de leu|львёнок
 ursoaică|медведица
-pui de urs|медвежонок
-lup răpitor|грабительский волк
-câine mut|немая собака
-câine sălbatic|дикая собака
-câine de pază|сторожевой пёс
-câine de turmă|пастушья собака
-măgar încărcat|нагруженный осёл
-cămile încărcate|нагруженные верблюды
-turmă de oi|стадо овец
-turmă de capre|стадо коз
-turmă de boi|стадо волов
-ciurdă de porci|стадо свиней
-viele din staul|телята из хлева
-oi pierdute|потерянные овцы
-miel pierdut|потерянный агнец
-oaie rătăcită|заблудшая овца
-berbec pentru jertfă|баран в жертву
-miel ars|сожжённый агнец
-pasăre pentru jertfă|птица в жертву
-turturică pentru jertfă|горлица в жертву
-porumbel de jertfă|голубь в жертву
-șarpe de aramă|медный змей
-șarpe încolăcit|свившийся змей
 viperă|гадюка
-șarpe veninos|ядовитая змея
-pești mulți|много рыб
-doi pești|две рыбы
-pâine și pești|хлеб и рыбы
-iepure de câmp|полевой заяц
-pasăre din cer|птица с неба
-pasăre din aer|птица воздушная
-pasăre migratoare|перелётная птица
-lăcustă din prăpastie|саранча из пропасти
-lăcustă cu aripi|крылатая саранча
-viermi dimineața|черви наутро
-viermi în carne|черви в мясе
-broaște din râu|лягушки из реки
-caii faraonului|кони фараона
-caii lui Solomon|кони Соломона
-cămile împăratului|верблюды царя
-măgarii judecătorilor|ослы судей
-boii lui Eli|волы Илия
-vițelul îngrășat|упитанный телёнок
-vițel de aur|телец золотой
-berbecii lui Laban|бараны Лавана
-oiile lui Iacov|овцы Иакова
-caprele lui Iacov|козы Иакова
-măgarii lui Saul|ослы Саула
-oiile lui David|овцы Давида
-măgarul lui Balaam|осёл Валаама
-cal alb|белый конь
-cai de război|боевые кони
-căprioară de dimineață|утренняя серна
-cerb slăbit|истощённый олень
 inorog|единорог
 păun|павлин
 struț|страус
 măgăruș|ослёнок
 puicuțe|цыплята
-măgarii lui Absalom|ослы Авессалома
-caii lui Ahab|кони Ахава
-bou sălbatic|дикий бык
-taur sălbatic|дикий бык
-bou de jertfă|вол в жертву
-miel pentru jertfă|агнец в жертву
-berbec pentru ardere|баран во всесожжение
-pasăre pentru păcat|птица за грех
-porumbel de curățire|голубь очищения
-șoim deșert|степной сокол
-corbi hrănitori|кормящие вороны
-corbi la pârâu|вороны у потока
-pești în Tiberiada|рыбы в Тивериаде
-pești la mal|рыбы у берега
+vrabie|воробей
+rândunică|ласточка
+gâscă|гусь
+rață|утка
+grui|журавль
+pelican|пеликан
+flamingo|фламинго
+papagal|попугай
+cuc|кукушка
+privighetoare|соловей
+cucuvea|сова
+corb|ворон
+vidră|выдра
+castor|бобёр
+arici|ёж
+cârtiță|крот
+liliac|летучая мышь
+scorpion|скорпион
+păianjen|паук
+nalbă|клещ
+căpușă|клещ
+albină|пчела
+bondар|шмель
+cârmaci|кормщик
+bursuc|барсук
+dihor|хорёк
+nevăstuică|ласка
+jder|куница
+samur|соболь
+cerboaică|самка оленя
+antilопă|антилопа
+gazelă|газель
+zimbru|зубр
+taur|бык
+asină|ослица
+catâr|мул
+armăsar|жеребец
+iapă|кобыла
+mânz|жеребёнок
+pui|птенец
+puiandru|цыплёнок
+ciută|лань

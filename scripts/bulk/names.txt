@@ -57,21 +57,16 @@ Mardoheu|Мардохей
 Neemia|Неемия
 Ezra|Ездра
 Iov|Иов
-Ioan Botezătorul|Иоанн Креститель
 Maria|Мария
 Iisus|Иисус
 Petru|Пётр
 Andrei|Андрей
-Iacov Zebedeu|Иаков Зеведеев
 Ioan|Иоанн
 Filip|Филипп
 Bartolomeu|Варфоломей
 Toma|Фома
 Matei|Матфей
-Iacov Alfeu|Иаков Алфеев
 Tadeu|Фаддей
-Simon Zelotul|Симон Зилот
-Iuda Iscarioteanul|Иуда Искариот
 Matia|Матфий
 Pavel|Павел
 Barnaba|Варнава
@@ -84,7 +79,6 @@ Lidia|Лидия
 Priscila|Прискилла
 Aquila|Акила
 Ștefan|Стефан
-Filip Diaconul|Филипп
 Corneliu|Корнилий
 Sila|Сила
 Apolo|Аполлос
@@ -110,6 +104,7 @@ Ruben|Рувим
 Simeon|Симеон
 Levi|Левий
 Iuda|Иуда
+Simon|Симон
 Neftali|Неффалим
 Gad|Гад
 Așer|Асир
@@ -150,7 +145,6 @@ Zorobabel|Зоровавель
 Ana|Анна
 Lazar|Лазарь
 Marta|Марфа
-Maria Magdalena|Мария Магдалина
 Iairus|Иаир
 Zacheu|Закхей
 Onisim|Оним
@@ -161,7 +155,6 @@ Gaiu|Гай
 Arhip|Архип
 Apfia|Апфия
 Epafrodit|Епафродит
-Iuda Barsaba|Иуда Варсава
 Procor|Прокор
 Nicanor|Никанор
 Timon|Тимон
@@ -177,3 +170,60 @@ Priska|Приска
 Asyncrit|Асинкрит
 Patroba|Патрова
 Herma|Гермас
+Batșeba|Вирсавия
+Ionatan|Ионафан
+Eli|Илий
+Hana|Анна
+Ahab|Ахав
+Izabela|Иезавель
+Naaman|Нееман
+Gehazi|Гиезий
+Ieroboam|Иеровоам
+Sadrac|Седрах
+Meșac|Мисах
+Baruh|Варух
+Irod|Ирод
+Pilat|Пилат
+Caifa|Каиафа
+Dalila|Далила
+Natanael|Нафанаил
+Tabita|Тавифа
+Dorca|Дорка
+Demas|Димас
+Silvan|Силуан
+Tertiu|Тертий
+Eliazar|Елеазар
+Fineas|Финеес
+Gomer|Гомер
+Hofni|Офни
+Penina|Пенинна
+Adoni|Адони
+Delila|Далила
+Ketura|Хеттура
+Ziporah|Сепфора
+Hobab|Ховав
+Caleb|Халев
+Othniel|Гофониил
+Iahaziel|Иахазиил
+Azaria|Азария
+Uzzia|Узия
+Amassia|Амасия
+Iosua|Иисус Навин
+Rahav|Раав
+Eleazar|Елеазар
+Itamar|Ифамар
+Nadab|Надав
+Abihu|Авиуд
+Bezaleel|Веселеил
+Oholiab|Аголиав
+Mefiboseth|Мемфивосфей
+Ira|Ира
+Husai|Хусий
+Adoniedec|Адониседек
+Araunah|Орна
+Chimham|Кимгам
+Elcana|Елкана
+Aminadab|Аминадав
+Nahasson|Наассон
+Salmon|Салмон
+Mahersalalhasbaz|Магер-шалал-хаш-баз

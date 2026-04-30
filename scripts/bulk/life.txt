@@ -17,6 +17,7 @@ legământ|завет
 jertfă|жертва
 iertare|прощение
 pocăință|покаяние
+botez|крещение
 mântuire|спасение
 răscumpărare|искупление
 ispășire|умилостивление
@@ -28,26 +29,6 @@ slujire|служение
 proorocie|пророчество
 înțelepciune|мудрость
 discernământ|различение
-adevăr de credință|истина веры
-frică de Dumnezeu|страх Божий
-Duhul Sfânt|Святой Дух
-Cuvântul lui Dumnezeu|Слово Божье
-Cina Domnului|Вечеря Господня
-botez cu apă|крещение водой
-naștere din nou|рождение свыше
-fapte bune|добрые дела
-porunca iubirii|заповедь любви
-fiu risipitor|блудный сын
-bun samaritean|добрый самарянин
-pâinea vieții|хлеб жизни
-apa vie|живая вода
-roada Duhului|плод Духа
-armura lui Dumnezeu|всеоружие Божье
-calea îngustă|узкий путь
-poarta strâmtă|тесные врата
-împărăția cerurilor|царство небесное
-venirea Domnului|пришествие Господа
-viață veșnică|вечная жизнь
 evanghelie|благовестие
 Scriptura|Писание
 Legea|закон
@@ -82,18 +63,51 @@ binecuvântare|благословение
 blestem|проклятие
 făgăduință|обетование
 jurământ|клятва
-ascultare de glas|послушание гласу
-umblare în lumină|хождение во свете
-unire cu Hristos|единение со Христом
-umblare cu Dumnezeu|хождение с Богом
-roadă de dreptate|плод праведности
-sâmbure de muștar|зерно горчичное
-sare de pământ|соль земная
-învierea morților|воскресение мёртвых
-ziua Domnului|день Господень
-trup duhovnicesc|духовное тело
-suflet viu|живая душа
-sânge de jertfă|кровь жертвы
-împărtășanie de sânge|причастие крови
-Cuvânt de viață|слово жизни
-Duh de putere|Дух силы
+păcat|грех
+slavă|слава
+putere|сила
+veșnicie|вечность
+suflet|душа
+trup|тело
+moarte|смерть
+viață|жизнь
+întuneric|тьма
+duh|дух
+curăție|чистота
+dreptate|праvedность
+credincioșie|верность
+bunătate|доброта
+blândețe|кротость
+înfrânare|воздержание
+sfat|совет
+minune|чудо
+vindecare|исцеление
+roadă|плод
+semn|знамение
+cale|путь
+lumânare|свеча
+slobozenie|освобождение
+veghea|бодрствование
+așteptare|ожидание
+chemare|призвание
+alegere|избрание
+pecete|печать
+rânduială|устав
+dar|дар
+daruri|дары
+slujbă|служба
+propovăduire|проповедь
+mustrare|обличение
+cercetare|посещение
+mărturisire|исповедь
+creație|творение
+providență|провидение
+răsplată|награда
+pedeapsă|наказание
+moștenire|наследство
+împăcare|примирение
+curăție|чистота
+sfințit|освящённый
+umilință|смиренность
+credință|вера
+tărie|крепость

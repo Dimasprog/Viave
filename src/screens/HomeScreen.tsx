@@ -38,7 +38,7 @@ export function HomeScreen({ navigation }: Props) {
 
   const onStart = useCallback(() => {
     prepareGame(category, teamCount, roundSeconds, skipPenalizesScore);
-    navigation.navigate('Game');
+    navigation.navigate('Countdown');
   }, [
     category,
     navigation,

@@ -58,10 +58,6 @@ Tars|Тарс
 Creta|Крит
 Malta|Мальта
 Euprat|Евфрат
-Mare Roșie|Красное море
-Mare Moartă|Мёртвое море
-Muntele Sion|гора Сион
-Valea Chedron|долина Кедрон
 Ai|Аи
 Gabaon|Гаваон
 Debir|Давир
@@ -125,3 +121,52 @@ Mifkad|Мифкад
 En-Rogel|Эн-Рогель
 En-Șemeș|Эн-Шемеш
 Rama|Рама
+Ofra|Офра
+Silom|Силом
+Gibea|Гивея
+Lachiș|Лахиш
+Mispa|Мицпа
+Sarepta|Сарепта
+Endor|Аендор
+Ofir|Офир
+Tarsis|Фарсис
+Nain|Наин
+Siloam|Силоам
+Betesda|Вифезда
+Ghenizaret|Геннисарет
+Arad|Арад
+Horma|Хорма
+Taanac|Фаанах
+Gilgal|Гилгал
+Ramot|Рамоф
+Dor|Дор
+Edrei|Едрей
+Aroer|Ароер
+Libnah|Ливна
+Azeca|Азека
+Bethoron|Бефорон
+Gheba|Гева
+Tofet|Тофет
+Ofni|Офни
+Kiriat|Кириаф
+Gibeea|Гивея
+Rama|Рама
+Nob|Нов
+Chedes|Кедес
+Dor|Дор
+Anатот|Анафоф
+Accaron|Аккарон
+Bet-El|Вефиль
+Avad|Авад
+Garizim|Гаризим
+Ebal|Гевал
+Meron|Мером
+Piel|Фенуил
+Succot|Сокхоф
+Aenon|Енон
+Tiberiada|Тивериада
+Gadara|Гадара
+Decapole|Декаполь
+Cezareea|Кесария
+Emaus|Эммаус
+Avraham|Авраам
